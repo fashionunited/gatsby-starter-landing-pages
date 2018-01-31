@@ -30,6 +30,8 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   }
 };
 
+// Implement the Gatsby API “onCreatePage”. This is
+// called after every page is created.
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
@@ -40,6 +42,16 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     const widescreenHeaderPage = path.resolve(
       "src/templates/widescreen-header-template.jsx"
     );
+
+    // https://www.gatsbyjs.org/docs/creating-and-modifying-pages/#choosing-the-page-layout
+    // if (page.path.match(/^\/landing-page/)) {
+    //   // It's assumed that `landingPage.js` exists in the `/layouts/` directory
+    //   page.layout = "workingAtLayout";
+
+    //   // Update the page.
+    //   createPage(page);
+    // }
+
     resolve(
       graphql(
         `
