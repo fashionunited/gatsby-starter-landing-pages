@@ -98,6 +98,24 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               slug: edge.node.fields.slug
             }
           });
+
+          // _.each(result.data.allMarkdownRemark.edges, edge => {
+          //   if (_.get(edge, "node.frontmatter.template") === "page") {
+          //     createPage({
+          //       path: edge.node.fields.slug,
+          //       component: slash(pageTemplate),
+          //       context: { slug: edge.node.fields.slug }
+          //     });
+          //   } else if (
+          //     _.get(edge, "node.frontmatter.template") === "widescreen"
+          //   ) {
+          //     createPage({
+          //       path: edge.node.fields.slug,
+          //       component: slash(widescreenHeaderPage),
+          //       context: { slug: edge.node.fields.slug }
+          //     });
+          //   }
+          // });
         });
 
         const tagList = Array.from(tagSet);
