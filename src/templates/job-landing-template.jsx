@@ -27,7 +27,7 @@ export default class widescreenHeaderTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <h1>Widescreen Header</h1>
+          <h1>Job Landing</h1>
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <div className="post-meta">
             <PostTags tags={post.tags} />
@@ -43,7 +43,7 @@ export default class widescreenHeaderTemplate extends React.Component {
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
-  query EmployerBrandingPageBySlug($slug: String!) {
+  query JobLandingPageBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
