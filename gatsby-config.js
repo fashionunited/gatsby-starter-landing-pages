@@ -25,13 +25,13 @@ module.exports = {
         path: `${__dirname}/content/${config.blogPostDir}`
       }
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `employerbrandingpages`,
-    //     path: `${__dirname}/content/${config.employerBrandingPagesDir}/`
-    //   }
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `employerbrandingpages`,
+        path: `${__dirname}/content/${config.employerBrandingPagesDir}/`
+      }
+    },
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
