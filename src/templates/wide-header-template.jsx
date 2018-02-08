@@ -8,8 +8,20 @@ import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
+import styled from "styled-components";
 
-export default class widescreenHeaderTemplate extends React.Component {
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
+const Wrapper = styled.section`
+  padding: 4em;
+  background: papayawhip;
+`;
+
+export default class wideHeaderTemplate extends React.Component {
   render() {
     const { slug } = this.props.pathContext;
     const postNode = this.props.data.markdownRemark;
@@ -27,7 +39,10 @@ export default class widescreenHeaderTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <h1>Widescreen Header</h1>
+          <Wrapper>
+            <Title>Widescreen Template</Title>
+          </Wrapper>
+
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <div className="post-meta">
             <PostTags tags={post.tags} />
@@ -43,7 +58,7 @@ export default class widescreenHeaderTemplate extends React.Component {
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
-  query EmployerBrandingPageBySlug($slug: String!) {
+  query WideHeaderPageBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead

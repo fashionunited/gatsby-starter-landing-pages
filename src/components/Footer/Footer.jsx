@@ -3,7 +3,12 @@ import Link from "gatsby-link";
 import UserLinks from "../UserLinks/UserLinks";
 import "./Footer.css";
 import config from "../../../data/SiteConfig";
+import styled from "styled-components";
 
+const Wrapper = styled.section`
+  padding: 4em;
+  background: #666;
+`;
 class Footer extends Component {
   render() {
     // const { config } = this.props;
@@ -15,16 +20,18 @@ class Footer extends Component {
     return (
       <footer className="footer">
         <UserLinks config={config} labeled />
-        <div className="notice-container">
-          <h1>FOOTER Advanced Jelle Footer</h1>
-          <h4>{copyright}</h4>
-          <h4>
-            Based on{" "}
-            <a href="https://github.com/Vagr9K/gatsby-advanced-starter">
-              Gatsby Advanced Starter
-            </a>.
-          </h4>
-        </div>
+        <Wrapper>
+          <div className="notice-container">
+            <h1>FOOTER Advanced Jelle Footer</h1>
+            <h4>{copyright}</h4>
+            <h4>
+              Based on{" "}
+              <a href="https://github.com/Vagr9K/gatsby-advanced-starter">
+                Gatsby Advanced Starter
+              </a>.
+            </h4>
+          </div>
+        </Wrapper>
       </footer>
     );
   }

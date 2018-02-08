@@ -1,5 +1,5 @@
 ---
-title: "VF Home"
+title: "VF Home - default (page)"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"
 category: "tech"
@@ -7,6 +7,7 @@ tags:
     - programming
     - stuff
     - other
+template: page-template
 ---
 
 # VF Home
