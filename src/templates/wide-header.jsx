@@ -21,6 +21,12 @@ const Wrapper = styled.section`
   background: papayawhip;
 `;
 
+// .fu-branding-hero-image {
+//   border-bottom: 5px solid #f5d8da;
+//   background-image: url(https://fashionunited.com/images/landing-pages/amazing-jewelry/amazing-jewelry.jpg);
+//   background-position: 40% 60%;
+// }
+
 export default class wideHeaderTemplate extends React.Component {
   render() {
     const { slug } = this.props.pathContext;
