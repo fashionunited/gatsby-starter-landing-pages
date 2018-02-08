@@ -7,8 +7,7 @@ tags:
     - programming
     - stuff
     - other
-template: page
-layout: page
+template: page-template
 ---
 
 # VF Home
