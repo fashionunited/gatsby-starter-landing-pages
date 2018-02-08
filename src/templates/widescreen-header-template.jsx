@@ -8,6 +8,20 @@ import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
+import styled from "styled-components";
+
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
+// Create a <Wrapper> react component that renders a <section> with
+// some padding and a papayawhip background
+const Wrapper = styled.section`
+  padding: 4em;
+  background: papayawhip;
+`;
 
 export default class widescreenHeaderTemplate extends React.Component {
   render() {
@@ -27,7 +41,10 @@ export default class widescreenHeaderTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <h1>Widescreen Template</h1>
+          <Wrapper>
+            <Title>Widescreen Template</Title>
+          </Wrapper>
+
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <div className="post-meta">
             <PostTags tags={post.tags} />
