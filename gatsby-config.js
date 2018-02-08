@@ -32,6 +32,13 @@ module.exports = {
         path: `${__dirname}/content/${config.employerBrandingPagesDir}/`
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `brandingpages`,
+        path: `${__dirname}/content/${config.brandingPagesDir}/`
+      }
+    },
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {

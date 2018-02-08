@@ -7,8 +7,10 @@ tags:
     - programming
     - stuff
     - other
+template: widescreen
+layout: no-header-footer
 ---
 
-# VF About
+# VF About Widescreen
 
 ABOUT ABOUT
