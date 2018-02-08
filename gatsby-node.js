@@ -39,8 +39,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     const postPage = path.resolve("src/templates/post-template.jsx");
     const tagPage = path.resolve("src/templates/tag-template.jsx");
     const categoryPage = path.resolve("src/templates/category-template.jsx");
-    const widescreenHeaderPage = path.resolve(
-      "src/templates/widescreen-header-template.jsx"
+    const wideHeaderPage = path.resolve(
+      "src/templates/wide-header-template.jsx"
     );
     const pagePage = path.resolve("src/templates/page-template.jsx");
 
@@ -92,21 +92,19 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               context: { slug: edge.node.fields.slug }
             });
           } else if (
-            _.get(edge, "node.frontmatter.template") === "widescreen" &&
+            _.get(edge, "node.frontmatter.template") === "wide" &&
             _.get(edge, "node.frontmatter.layout") === "no-header-footer"
           ) {
             createPage({
               path: edge.node.fields.slug,
-              component: widescreenHeaderPage,
+              component: wideHeaderPage,
               layout: `no-header-footer`,
               context: { slug: edge.node.fields.slug }
             });
-          } else if (
-            _.get(edge, "node.frontmatter.template") === "widescreen"
-          ) {
+          } else if (_.get(edge, "node.frontmatter.template") === "wide") {
             createPage({
               path: edge.node.fields.slug,
-              component: widescreenHeaderPage,
+              component: wideHeaderPage,
               context: { slug: edge.node.fields.slug }
             });
           } else {
