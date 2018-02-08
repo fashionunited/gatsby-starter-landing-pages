@@ -1,11 +1,13 @@
 ---
 title: "Birch in the Roses"
+template: post
 cover: "https://unsplash.it/1152/300/?random?BirchintheRoses"
 date: "01/03/2017"
 category: "tech"
 tags:
     - tag
 ---
+
 # Domos primus caelum taedia
 
 ## Accipit alto fecerat mutato centauri haerent dominoque
@@ -53,5 +55,5 @@ utinam sed, non nemo mixtos thyrsos. Inobservata subsunt.
 
 Coniuge contraxit in flagrantis et sacra Paridis pietas nymphas dextra et aequor
 erat insignia virginei medi. Acervo ferrum! Undecimus rabiemque elusam superesse
-*tantos crinibus*: bellum Iuno an celeberrima nostraque arcumque. Sive quod
+_tantos crinibus_: bellum Iuno an celeberrima nostraque arcumque. Sive quod
 inter Cynthia est gemitu crimina sis, et preces cuncta tamen?

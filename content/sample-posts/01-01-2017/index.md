@@ -7,7 +7,7 @@ tags:
     - programming
     - stuff
     - other
-template: widescreen
+template: post
 ---
 
 # Quanto et ius coniunctis urbes
