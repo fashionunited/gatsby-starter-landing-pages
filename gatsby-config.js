@@ -18,13 +18,31 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
-    {
-      resolve: "gatsby-plugin-i18n",
-      options: {
-        langKeyDefault: "en",
-        useLangKeyLayout: false
-      }
-    },
+    // {
+    //   resolve: "gatsby-plugin-i18n",
+    //   options: {
+    //     langKeyDefault: "en",
+    //     useLangKeyLayout: false,
+    //     pagesPaths: ["/content/"],
+    //     markdownRemark: {
+    //       postPage: "src/templates/post-template.jsx",
+    //       query: `
+    //       {
+    //           allMarkdownRemark {
+    //               edges {
+    //               node {
+    //                   fields {
+    //                   slug,
+    //                   langKey
+    //                   }
+    //               }
+    //               }
+    //           }
+    //       }
+    //       `
+    //     }
+    //   }
+    // },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -49,24 +67,17 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `brandingpages`,
+        name: `workingatpages`,
         path: `${__dirname}/content/${config.workingAtPagesDir}/`
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `brandingpages`,
+        name: `joblandingpages`,
         path: `${__dirname}/content/${config.jobLandingPagesDir}/`
       }
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `brandingpages`,
-    //     path: `${__dirname}/content/${config.brandingPagesDir}/`
-    //   }
-    // },
     {
       resolve: "gatsby-transformer-remark",
       options: {
