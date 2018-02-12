@@ -7,21 +7,15 @@ import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
-import "./post.css";
 import styled from "styled-components";
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
+const Meta = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
-const Wrapper = styled.section`
-  padding: 4em;
-  background: papayawhip;
-`;
-
-export default class wideHeaderTemplate extends React.Component {
+export default class PostTemplate extends React.Component {
   render() {
     const { slug } = this.props.pathContext;
     const postNode = this.props.data.markdownRemark;
@@ -39,15 +33,12 @@ export default class wideHeaderTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <Wrapper>
-            <Title>Widescreen Template</Title>
-          </Wrapper>
-
+          <h1>{post.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          <div className="post-meta">
+          <Meta>
             <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
-          </div>
+          </Meta>
           <UserInfo config={config} />
           <Disqus postNode={postNode} />
         </div>
@@ -58,7 +49,7 @@ export default class wideHeaderTemplate extends React.Component {
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
-  query WideHeaderPageBySlug($slug: String!) {
+  query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead

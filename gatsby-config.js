@@ -25,7 +25,7 @@ module.exports = {
     //     useLangKeyLayout: false,
     //     pagesPaths: ["/content/"],
     //     markdownRemark: {
-    //       postPage: "src/templates/post-template.jsx",
+    //       postPage: "src/templates/post.jsx",
     //       query: `
     //       {
     //           allMarkdownRemark {

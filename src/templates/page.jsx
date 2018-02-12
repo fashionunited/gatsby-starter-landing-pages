@@ -7,7 +7,24 @@ import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
-import "./post.css";
+import styled from "styled-components";
+
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
+const Wrapper = styled.section`
+  padding: 4em;
+  background: papayawhip;
+`;
+
+const Meta = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
 
 export default class PageTemplate extends React.Component {
   render() {
@@ -29,10 +46,10 @@ export default class PageTemplate extends React.Component {
         <div>
           <h1>{post.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          <div className="post-meta">
+          <Meta>
             <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
-          </div>
+          </Meta>
           <UserInfo config={config} />
           <Disqus postNode={postNode} />
         </div>
