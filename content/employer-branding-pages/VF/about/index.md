@@ -2,8 +2,10 @@
 title: "VF About - widescreen noheaderfooter"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"
-category: "tech"
+category: "employer-branding"
 tags:
+    - employer-branding
+    - EBP
     - programming
     - stuff
     - other

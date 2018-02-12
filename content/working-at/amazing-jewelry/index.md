@@ -2,7 +2,7 @@
 title: "Amazing Jewelry - wide noheaderfooter"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"
-category: "tech"
+category: "working-at"
 tags:
     - programming
     - stuff

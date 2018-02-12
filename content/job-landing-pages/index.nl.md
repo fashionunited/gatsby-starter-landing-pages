@@ -2,10 +2,10 @@
 title: "Vind modevacatures op de modevacaturebank"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"
-category: "tech"
+category: "job-landing"
 tags:
     - job-landing
-template: wide-header-template
+template: wide-header
 layout: no-header-footer
 ---
 

@@ -36,11 +36,11 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
-    const postPage = path.resolve("src/templates/post-template.jsx");
-    const tagPage = path.resolve("src/templates/tag-template.jsx");
-    const categoryPage = path.resolve("src/templates/category-template.jsx");
-    const widePage = path.resolve("src/templates/wide-header-template.jsx");
-    const pagePage = path.resolve("src/templates/page-template.jsx");
+    const postPage = path.resolve("src/templates/post.jsx");
+    const tagPage = path.resolve("src/templates/tag.jsx");
+    const categoryPage = path.resolve("src/templates/category.jsx");
+    const widePage = path.resolve("src/templates/wide-header.jsx");
+    const pagePage = path.resolve("src/templates/page.jsx");
 
     // https://www.gatsbyjs.org/docs/creating-and-modifying-pages/#choosing-the-page-layout
     // if (page.path.match(/^\/landing-page/)) {

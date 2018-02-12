@@ -9,13 +9,23 @@ import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import styled from "styled-components";
 
-const StyledDiv = styled.div`
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
+const Wrapper = styled.section`
+  padding: 4em;
+  background: papayawhip;
+`;
+
+const Meta = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
 `;
-
-export default class PostTemplate extends React.Component {
+export default class wideHeaderTemplate extends React.Component {
   render() {
     const { slug } = this.props.pathContext;
     const postNode = this.props.data.markdownRemark;
@@ -33,12 +43,15 @@ export default class PostTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <h1>{post.title}</h1>
+          <Wrapper>
+            <Title>Widescreen Template</Title>
+          </Wrapper>
+
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          <StyledDiv>
+          <Meta>
             <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
-          </StyledDiv>
+          </Meta>
           <UserInfo config={config} />
           <Disqus postNode={postNode} />
         </div>
@@ -49,7 +62,7 @@ export default class PostTemplate extends React.Component {
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query WideHeaderPageBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
