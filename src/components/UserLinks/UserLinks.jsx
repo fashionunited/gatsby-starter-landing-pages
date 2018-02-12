@@ -1,5 +1,13 @@
 import React, { Component } from "react";
-import "./UserLinks.css";
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+`;
 
 class UserLinks extends Component {
   getLinkElements() {
@@ -16,7 +24,7 @@ class UserLinks extends Component {
     if (!userLinks) {
       return null;
     }
-    return <div className="user-links">{this.getLinkElements()}</div>;
+    return <StyledDiv>{this.getLinkElements()}</StyledDiv>;
   }
 }
 
