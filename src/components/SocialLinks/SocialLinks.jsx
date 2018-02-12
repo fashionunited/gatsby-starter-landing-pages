@@ -19,7 +19,25 @@ import {
   generateShareIcon
 } from "react-share";
 import config from "../../../data/SiteConfig";
-import "./SocialLinks.css";
+import styled from "styled-components";
+
+// .social-links > div {
+//   margin: 5px 15px;
+// }
+
+// .share-count {
+//   text-align: center;
+// }
+
+const Links = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 15px 0;
+`;
 
 class SocialLinks extends Component {
   render() {
@@ -30,7 +48,7 @@ class SocialLinks extends Component {
     const filter = count => (count > 0 ? count : "");
 
     return (
-      <div className="social-links">
+      <Links>
         <RedditShareButton url={url} title={post.title}>
           <RedditIcon round size={iconSize} />
           <RedditShareCount url={url}>
@@ -70,7 +88,7 @@ class SocialLinks extends Component {
         <TelegramShareButton url={url}>
           <TelegramIcon round size={iconSize} />
         </TelegramShareButton>
-      </div>
+      </Links>
     );
   }
 }

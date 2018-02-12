@@ -1,9 +1,34 @@
 import React, { Component } from "react";
 import Link from "gatsby-link";
 import UserLinks from "../UserLinks/UserLinks";
-import "./Footer.css";
 import config from "../../../data/SiteConfig";
 import styled from "styled-components";
+
+// @media (max-width: 640px - 1px) {
+//   .notice-container {
+//       justify-content: space-around;
+//   }
+// }
+
+const StyledFooter = styled.footer`
+  justify-content: center;
+  align-content: center;
+  padding: 10px 5px 5px;
+`;
+
+const NoticeContainerH4 = styled.h4`
+  text-align: center;
+  margin: 0;
+`;
+
+const NoticeContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  margin-top: 25px;
+`;
 
 const Wrapper = styled.section`
   padding: 4em;
@@ -18,21 +43,21 @@ class Footer extends Component {
       return null;
     }
     return (
-      <footer className="footer">
+      <StyledFooter>
         <UserLinks config={config} labeled />
         <Wrapper>
           <div className="notice-container">
             <h1>FOOTER Advanced Jelle Footer</h1>
-            <h4>{copyright}</h4>
-            <h4>
+            <NoticeContainerH4>{copyright}</NoticeContainerH4>
+            <NoticeContainerH4>
               Based on{" "}
               <a href="https://github.com/Vagr9K/gatsby-advanced-starter">
                 Gatsby Advanced Starter
               </a>.
-            </h4>
+            </NoticeContainerH4>
           </div>
         </Wrapper>
-      </footer>
+      </StyledFooter>
     );
   }
 }
