@@ -2,10 +2,10 @@
 title: "VF Home - default (page)"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"
-category: "tech"
+category: "employer-branding"
 tags:
-    - programming
-    - stuff
+    - employer-branding
+    - EBP
     - other
 template: page-template
 ---
