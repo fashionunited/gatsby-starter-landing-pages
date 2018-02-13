@@ -12,18 +12,22 @@ import styled from "styled-components";
 const Title = styled.h1`
   font-size: 1.5em;
   text-align: center;
-  color: palevioletred;
-`;
-
-const Wrapper = styled.section`
-  padding: 4em;
-  background: papayawhip;
+  color: white;
 `;
 
 const Meta = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+`;
+const Hero = styled.header.attrs({
+  image: props => props.image || "https://unsplash.it/400/300/?random?BoldMage"
+})`
+  padding: 4em;
+  background: papayawhip;
+  border-bottom: 5px solid #3b454a;
+  background-image: url(${props => props.image});
+  background-position: 40% 50%;
 `;
 export default class wideHeaderTemplate extends React.Component {
   render() {
@@ -43,10 +47,9 @@ export default class wideHeaderTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <Wrapper>
+          <Hero image={post.cover}>
             <Title>Widescreen Template</Title>
-          </Wrapper>
-
+          </Hero>
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <Meta>
             <PostTags tags={post.tags} />
