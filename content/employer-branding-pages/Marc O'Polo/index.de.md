@@ -1,13 +1,14 @@
 ---
 title: "Marc O'Polo - DE default (page)"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
+cover: "https://picsum.photos/1920/400/?random?BoldMage"
 date: "01/01/2017"
 category: "employer-branding"
 tags:
     - employer-branding
     - EBP
     - Marc O'Polo
-template: page
+template: wide-header
+hero: "marco-polo-ebp-hero.jpg"
 ---
 
 # Marc O'Polo
