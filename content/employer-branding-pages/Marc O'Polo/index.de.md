@@ -1,8 +1,10 @@
 ---
 title: "Marc O'Polo Jobs"
+template: "wide-header" 
 slug: "jobs/marco-polo-jobs"
 domain: "fashionunited.de"
-cover: "https://picsum.photos/1920/400/?random?BoldMage"
+cover: "https://unsplash.it/400/300/?random?BoldMage"
+# cover: "./marco-polo-ebp-hero.jpg"
 date: "01/01/2017"
 category: "employer-branding"
 tags:
