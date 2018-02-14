@@ -9,7 +9,6 @@ tags:
     - employer-branding
     - EBP
     - Marc O'Polo
-template: wide-header
 ---
 
 # Marc O'Polo

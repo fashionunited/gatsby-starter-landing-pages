@@ -100,7 +100,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               context: { slug: edge.node.fields.slug }
             });
           }
-          if (_.get(edge, "node.frontmatter.layout") === null) {
+          if (_.get(edge, "node.frontmatter.template") === null) {
             createPage({
               path: edge.node.fields.slug,
               component: pagePage,
