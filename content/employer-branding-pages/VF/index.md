@@ -1,5 +1,7 @@
 ---
 title: "VF Home - default (page)"
+slug: "jobs/vf"
+domain: "fashionunited.uk"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"
 category: "employer-branding"
@@ -7,7 +9,7 @@ tags:
     - employer-branding
     - EBP
     - other
-template: page
+template: wide-header
 ---
 
 # VF Home

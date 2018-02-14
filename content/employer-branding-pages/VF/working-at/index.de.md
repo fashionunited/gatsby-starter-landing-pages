@@ -1,5 +1,7 @@
 ---
-title: "VF Careers - wide"
+title: "VF Working At - widescreen noheaderfooter"
+slug: "jobs/vf/arbeiten-bei"
+domain: "fashionunited.de"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"
 category: "employer-branding"
@@ -10,8 +12,9 @@ tags:
     - stuff
     - other
 template: wide-header
+layout: no-header-footer
 ---
 
-# VF Careers
+# Arbeiten bei VF
 
-Work with us, it is super cool
+ABOUT ABOUT

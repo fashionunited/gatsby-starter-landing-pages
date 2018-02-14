@@ -1,5 +1,7 @@
 ---
-title: "Marc O'Polo - DE default (page)"
+title: "Marc O'Polo Jobs"
+slug: "jobs\/marco-polo-jobs"
+domain: "fashionunited.de"
 cover: "https://picsum.photos/1920/400/?random?BoldMage"
 date: "01/01/2017"
 category: "employer-branding"
@@ -8,7 +10,6 @@ tags:
     - EBP
     - Marc O'Polo
 template: wide-header
-hero: "marco-polo-ebp-hero.jpg"
 ---
 
 # Marc O'Polo

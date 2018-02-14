@@ -13,7 +13,7 @@ import styled from "styled-components";
 const StyledFooter = styled.footer`
   justify-content: center;
   align-content: center;
-  padding: 10px 5px 5px;
+  /* padding: 10px 5px 5px; */
 `;
 
 const NoticeContainerH4 = styled.h4`
