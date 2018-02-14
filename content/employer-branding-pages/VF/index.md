@@ -1,6 +1,6 @@
 ---
-title: "VF Home - default (page)"
-slug: "jobs/vf"
+title: "VF Jobs"
+slug: slug: "jobs/vf-jobs-jobs"
 domain: "fashionunited.uk"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"

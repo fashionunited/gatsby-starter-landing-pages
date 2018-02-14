@@ -1,6 +1,6 @@
 ---
 title: "VF Careers - wide"
-slug: "jobs/vf/career"
+slug: slug: "jobs/vf-jobs/career"
 domain: "fashionunited.uk"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"

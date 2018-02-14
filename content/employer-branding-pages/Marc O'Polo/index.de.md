@@ -1,6 +1,6 @@
 ---
 title: "Marc O'Polo Jobs"
-slug: "jobs\/marco-polo-jobs"
+slug: "jobs\marco-polo-jobs"
 domain: "fashionunited.de"
 cover: "https://picsum.photos/1920/400/?random?BoldMage"
 date: "01/01/2017"
