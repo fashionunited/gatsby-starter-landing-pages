@@ -9,13 +9,13 @@ const Title = styled.h1`
 `;
 
 const Wrapper = styled.section`
-  padding: 4em;
+  padding: 1em;
   background: #666;
 `;
 
 const Header = () => (
   <Wrapper>
-    <Title>FashionUnited Header</Title>
+    <Title>FashionUnited Header / Toolbar</Title>
   </Wrapper>
 );
 

@@ -1,5 +1,7 @@
 ---
-title: "VF About - widescreen noheaderfooter"
+title: "VF Working At - widescreen noheaderfooter"
+slug: "jobs/vf/arbeiten-bei"
+domain: "fashionunited.de"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"
 category: "employer-branding"
@@ -13,6 +15,6 @@ template: wide-header
 layout: no-header-footer
 ---
 
-# VF About Widescreen
+# Arbeiten bei VF
 
 ABOUT ABOUT

@@ -19,6 +19,13 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       Object.prototype.hasOwnProperty.call(node.frontmatter, "title")
     ) {
       slug = `/${_.kebabCase(node.frontmatter.title)}`;
+    }
+    if (
+      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, "slug") &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, "domain")
+    ) {
+      slug = `${_.kebabCase(node.frontmatter.domain)}/${node.frontmatter.slug}`;
     } else if (parsedFilePath.name !== "index" && parsedFilePath.dir !== "") {
       slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
     } else if (parsedFilePath.dir === "") {

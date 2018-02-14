@@ -18,31 +18,6 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
-    // {
-    //   resolve: "gatsby-plugin-i18n",
-    //   options: {
-    //     langKeyDefault: "en",
-    //     useLangKeyLayout: false,
-    //     pagesPaths: ["/content/"],
-    //     markdownRemark: {
-    //       postPage: "src/templates/post.jsx",
-    //       query: `
-    //       {
-    //           allMarkdownRemark {
-    //               edges {
-    //               node {
-    //                   fields {
-    //                   slug,
-    //                   langKey
-    //                   }
-    //               }
-    //               }
-    //           }
-    //       }
-    //       `
-    //     }
-    //   }
-    // },
     {
       resolve: "gatsby-source-filesystem",
       options: {
