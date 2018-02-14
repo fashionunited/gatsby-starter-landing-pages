@@ -48,7 +48,7 @@ export default class wideHeaderTemplate extends React.Component {
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
           <Hero image={post.cover}>
-            <Title>Widescreen Template</Title>
+            <Title>{post.title}</Title>
           </Hero>
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <Meta>
@@ -63,7 +63,7 @@ export default class wideHeaderTemplate extends React.Component {
   }
 }
 
-/* eslint no-undef: "off"*/
+/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query WideHeaderPageBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
