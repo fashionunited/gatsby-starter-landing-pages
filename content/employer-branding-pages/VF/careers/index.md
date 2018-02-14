@@ -1,6 +1,6 @@
 ---
-title: "VF Careers - wide"
-slug: "jobs/vf-jobs/career"
+title: "VF Careers"
+slug: "jobs/vf-jobs/careers"
 domain: "fashionunited.uk"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"
@@ -14,6 +14,6 @@ tags:
 template: wide-header
 ---
 
-# VF Careers
+[jobs](../vf-jobs) [careers](../vf-jobs/careers) [working-at](../vf-jobs/working-at)
 
 Work with us, it is super cool

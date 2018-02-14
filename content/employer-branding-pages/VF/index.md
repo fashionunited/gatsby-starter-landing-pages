@@ -1,6 +1,6 @@
 ---
 title: "VF Jobs"
-slug: "jobs/vf-jobs-jobs"
+slug: "jobs/vf-jobs"
 domain: "fashionunited.uk"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"
@@ -12,7 +12,7 @@ tags:
 template: wide-header
 ---
 
-# VF Home
+[jobs](vf-jobs) [careers](vf-jobs/careers) [working-at](vf-jobs/working-at)
 
 We are a $12 billion apparel, footwear and accessories powerhouse.
 
