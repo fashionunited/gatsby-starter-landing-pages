@@ -12,7 +12,6 @@ tags:
     - stuff
     - other
 template: wide-header
-layout: no-header-footer
 ---
 
 # Working at VF

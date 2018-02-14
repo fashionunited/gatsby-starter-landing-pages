@@ -1,6 +1,6 @@
 ---
 title: "VF Home - CH"
-slug: "jobs/vf-jobs"
+slug: "jobs/vf"
 domain: "fashionunited.ch"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"
