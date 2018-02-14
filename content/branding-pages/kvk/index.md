@@ -7,7 +7,6 @@ tags:
     - programming
     - stuff
     - other
-template: wide-header
 ---
 
 # KvK Branding page Home
