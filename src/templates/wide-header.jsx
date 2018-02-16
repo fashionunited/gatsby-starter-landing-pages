@@ -8,6 +8,7 @@ import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import styled from "styled-components";
+import { DFPSlotsProvider, AdSlot } from "react-dfp";
 
 const Meta = styled.div`
   display: flex;
@@ -41,6 +42,16 @@ export default class wideHeaderTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
+          <DFPSlotsProvider
+            dfpNetworkId={"5347124"}
+            adUnit={"COM_Mobile_Top_Full"}
+          >
+            <AdSlot sizes={[[320, 50], [320, 100]]} />
+            <AdSlot
+              adUnit={"COM_Mobile_Top_Full"}
+              sizes={[[320, 50], [320, 100]]}
+            />
+          </DFPSlotsProvider>
           <Hero image={post.cover} />
           <h1>{post.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
