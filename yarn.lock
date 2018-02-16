@@ -4441,6 +4441,12 @@ gatsby-plugin-google-analytics@^1.0.14:
   dependencies:
     babel-runtime "^6.26.0"
 
+gatsby-plugin-google-tagmanager@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-1.0.14.tgz#76c02220d34ecc780d763ec5ea605449211c6d4c"
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-plugin-i18n@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-i18n/-/gatsby-plugin-i18n-0.4.1.tgz#60289ef262318a7bb1c9fff4e3ec0d07ca519f97"
