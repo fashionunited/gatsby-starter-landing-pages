@@ -1,5 +1,5 @@
 ---
-title: "VF Working At - widescreen noheaderfooter"
+title: "Working at VF"
 slug: "jobs/vf-jobs/working-at"
 domain: "fashionunited.uk"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
@@ -14,6 +14,6 @@ tags:
 template: wide-header
 ---
 
-# Working at VF
+[jobs](../vf-jobs) [careers](../vf-jobs/careers) [working-at](../vf-jobs/working-at)
 
-ABOUT ABOUT
+working at page

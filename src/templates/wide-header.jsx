@@ -9,12 +9,6 @@ import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import styled from "styled-components";
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: white;
-`;
-
 const Meta = styled.div`
   display: flex;
   flex-direction: column;
@@ -47,9 +41,8 @@ export default class wideHeaderTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <Hero image={post.cover}>
-            <Title>Widescreen Template</Title>
-          </Hero>
+          <Hero image={post.cover} />
+          <h1>{post.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <Meta>
             <PostTags tags={post.tags} />
@@ -63,7 +56,7 @@ export default class wideHeaderTemplate extends React.Component {
   }
 }
 
-/* eslint no-undef: "off"*/
+/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query WideHeaderPageBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {

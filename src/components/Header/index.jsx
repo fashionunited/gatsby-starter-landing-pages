@@ -15,7 +15,9 @@ const Wrapper = styled.section`
 
 const Header = () => (
   <Wrapper>
-    <Title>FashionUnited Header / Toolbar</Title>
+    <Title>
+      <a href="/">FashionUnited Header / Toolbar</a>
+    </Title>
   </Wrapper>
 );
 
