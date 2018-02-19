@@ -44,17 +44,26 @@ export default class wideHeaderTemplate extends React.Component {
         <div>
           <DFPSlotsProvider
             dfpNetworkId={"5347124"}
-            adUnit={"COM_Mobile_Top_Full"}
+            adUnit={"TEST/JobLanding_Top"}
           >
-            <AdSlot sizes={[[320, 50], [320, 100]]} />
-            <AdSlot
-              adUnit={"COM_Mobile_Top_Full"}
-              sizes={[[320, 50], [320, 100]]}
-            />
+            <AdSlot sizes={[[320, 50], [320, 100], [970, 90], [970, 250]]} />
           </DFPSlotsProvider>
           <Hero image={post.cover} />
           <h1>{post.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+          <DFPSlotsProvider
+            dfpNetworkId={"5347124"}
+            adUnit={"TEST/JobLanding_Left"}
+          >
+            <AdSlot sizes={[[300, 600]]} />
+          </DFPSlotsProvider>
+          <DFPSlotsProvider
+            dfpNetworkId={"5347124"}
+            adUnit={"TEST/JobLanding_Right"}
+          >
+            <AdSlot sizes={[[300, 600]]} />
+          </DFPSlotsProvider>
+
           <Meta>
             <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
