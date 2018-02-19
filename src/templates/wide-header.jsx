@@ -42,7 +42,7 @@ export default class wideHeaderTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <DFPSlotsProvider
+          {/* <DFPSlotsProvider
             dfpNetworkId={"5347124"}
             adUnit={"TEST/JobLanding_Top"}
           >
@@ -62,7 +62,7 @@ export default class wideHeaderTemplate extends React.Component {
             adUnit={"TEST/JobLanding_Right"}
           >
             <AdSlot sizes={[[300, 600]]} />
-          </DFPSlotsProvider>
+          </DFPSlotsProvider> */}
 
           <Meta>
             <PostTags tags={post.tags} />
