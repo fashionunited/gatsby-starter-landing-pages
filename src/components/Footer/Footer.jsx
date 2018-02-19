@@ -14,6 +14,7 @@ const StyledFooter = styled.footer`
   justify-content: center;
   align-content: center;
   /* padding: 10px 5px 5px; */
+  color: white;
 `;
 
 const NoticeContainerH4 = styled.h4`

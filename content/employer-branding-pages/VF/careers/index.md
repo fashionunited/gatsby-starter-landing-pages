@@ -14,6 +14,6 @@ tags:
 template: wide-header
 ---
 
-# VF Careers
+[jobs](../vf-jobs) [careers](../vf-jobs/careers) [working-at](../vf-jobs/working-at)
 
 Work with us, it is super cool

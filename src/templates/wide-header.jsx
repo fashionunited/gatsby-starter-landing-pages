@@ -8,12 +8,7 @@ import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import styled from "styled-components";
-
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: white;
-`;
+import { DFPSlotsProvider, AdSlot } from "react-dfp";
 
 const Meta = styled.div`
   display: flex;
@@ -47,10 +42,28 @@ export default class wideHeaderTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <Hero image={post.cover}>
-            <Title>Widescreen Template</Title>
-          </Hero>
+          <DFPSlotsProvider
+            dfpNetworkId={"5347124"}
+            adUnit={"TEST/JobLanding_Top"}
+          >
+            <AdSlot sizes={[[320, 50], [320, 100], [970, 90], [970, 250]]} />
+          </DFPSlotsProvider>
+          <Hero image={post.cover} />
+          <h1>{post.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+          <DFPSlotsProvider
+            dfpNetworkId={"5347124"}
+            adUnit={"TEST/JobLanding_Left"}
+          >
+            <AdSlot sizes={[[300, 600]]} />
+          </DFPSlotsProvider>
+          <DFPSlotsProvider
+            dfpNetworkId={"5347124"}
+            adUnit={"TEST/JobLanding_Right"}
+          >
+            <AdSlot sizes={[[300, 600]]} />
+          </DFPSlotsProvider>
+
           <Meta>
             <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
@@ -63,7 +76,7 @@ export default class wideHeaderTemplate extends React.Component {
   }
 }
 
-/* eslint no-undef: "off"*/
+/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query WideHeaderPageBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
