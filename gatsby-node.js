@@ -68,6 +68,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 node {
                   frontmatter {
                     tags
+                    tabs
                     category
                     layout
                     template

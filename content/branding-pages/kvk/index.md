@@ -7,6 +7,10 @@ tags:
     - programming
     - stuff
     - other
+tabs:
+    - programming
+    - stuff
+    - other
 ---
 
 # KvK Branding page Home
