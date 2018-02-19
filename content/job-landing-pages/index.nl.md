@@ -5,7 +5,7 @@ date: "01/01/2017"
 category: "job-landing"
 tags:
     - job-landing
-template: wide-header
+template: job-landing
 layout: no-header-footer
 ---
 

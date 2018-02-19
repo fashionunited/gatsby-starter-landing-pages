@@ -11,7 +11,7 @@ tags:
     - programming
     - stuff
     - other
-template: wide-header
+template: wide
 layout: no-header-footer
 ---
 

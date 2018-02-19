@@ -7,9 +7,8 @@ import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
-import "./post.css";
 
-export default class widescreenHeaderTemplate extends React.Component {
+export default class jobLandingTemplate extends React.Component {
   render() {
     const { slug } = this.props.pathContext;
     const postNode = this.props.data.markdownRemark;

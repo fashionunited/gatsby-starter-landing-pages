@@ -2,7 +2,7 @@
 title: "Find your fashion job with FashionUnited"
 slug: "career-centre"
 domain: "fashionunited.uk"
-template: wide-header
+template: job-landing
 layout: no-header-footer
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"

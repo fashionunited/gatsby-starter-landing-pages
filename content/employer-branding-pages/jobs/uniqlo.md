@@ -1,5 +1,5 @@
 ---
-template : "wide-header"
+template : wide
 cover : "https://fashionunited.uk/images/landing-pages/uniqlo/uniqlo_background.jpg"
 slug : "uniqlo-jobs"
 title : "UNIQLO jobs - working at UNIQLO"

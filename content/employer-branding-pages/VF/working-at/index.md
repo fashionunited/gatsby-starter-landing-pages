@@ -11,7 +11,7 @@ tags:
     - programming
     - stuff
     - other
-template: wide-header
+template: wide
 ---
 
 [jobs](../vf-jobs) [careers](../vf-jobs/careers) [working-at](../vf-jobs/working-at)

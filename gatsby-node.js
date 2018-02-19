@@ -46,8 +46,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     const postPage = path.resolve("src/templates/post.jsx");
     const tagPage = path.resolve("src/templates/tag.jsx");
     const categoryPage = path.resolve("src/templates/category.jsx");
-    const widePage = path.resolve("src/templates/wide-header.jsx");
+    const widePage = path.resolve("src/templates/wide.jsx");
     const pagePage = path.resolve("src/templates/page.jsx");
+    const jobLandingPage = path.resolve("src/templates/job-landing.jsx");
 
     // https://www.gatsbyjs.org/docs/creating-and-modifying-pages/#choosing-the-page-layout
     // if (page.path.match(/^\/landing-page/)) {
@@ -99,23 +100,30 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               layout: `no-header-footer`,
               context: { slug: edge.node.fields.slug }
             });
-          }
-          if (_.get(edge, "node.frontmatter.template") === null) {
+          } else if (_.get(edge, "node.frontmatter.template") === "wide") {
             createPage({
               path: edge.node.fields.slug,
-              component: pagePage,
+              component: widePage,
               context: { slug: edge.node.fields.slug }
             });
-          } else if (_.get(edge, "node.frontmatter.template") === "page") {
+          } else if (
+            _.get(edge, "node.frontmatter.template") === "job-landing"
+          ) {
             createPage({
               path: edge.node.fields.slug,
-              component: pagePage,
+              component: jobLandingPage,
               context: { slug: edge.node.fields.slug }
             });
           } else if (_.get(edge, "node.frontmatter.template") === "post") {
             createPage({
               path: edge.node.fields.slug,
               component: postPage,
+              context: { slug: edge.node.fields.slug }
+            });
+          } else if (_.get(edge, "node.frontmatter.template") === null) {
+            createPage({
+              path: edge.node.fields.slug,
+              component: pagePage,
               context: { slug: edge.node.fields.slug }
             });
           } else {
