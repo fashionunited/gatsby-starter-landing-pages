@@ -1,5 +1,5 @@
 ---
-title: "VF Jobs"
+title: "VF Jobs DE"
 slug: "jobs/vf-jobs"
 domain: "fashionunited.de"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
@@ -9,7 +9,7 @@ tags:
     - employer-branding
     - EBP
     - other
-template: wide-header
+template: wide
 ---
 
 [karriere](vf-jobs/karriere) [arbeiten-bei](vf-jobs/arbeiten-bei)

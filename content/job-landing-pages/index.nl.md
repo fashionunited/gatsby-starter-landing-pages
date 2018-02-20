@@ -5,8 +5,7 @@ date: "01/01/2017"
 category: "job-landing"
 tags:
     - job-landing
-template: wide-header
-layout: no-header-footer
+template: job-landing
 ---
 
 # Vind modevacatures op de modevacaturebank

@@ -1,6 +1,6 @@
 ---
 title: "Marc O'Polo Jobs"
-template: "wide-header" 
+template: wide 
 slug: "jobs/marco-polo-jobs"
 domain: "fashionunited.de"
 cover: "https://unsplash.it/400/300/?random?BoldMage"

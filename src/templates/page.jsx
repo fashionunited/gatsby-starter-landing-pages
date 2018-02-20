@@ -58,7 +58,7 @@ export default class PageTemplate extends React.Component {
   }
 }
 
-/* eslint no-undef: "off"*/
+/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query BlogPageBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {

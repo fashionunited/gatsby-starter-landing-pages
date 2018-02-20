@@ -1,5 +1,5 @@
 ---
-title: "VF Jobs"
+title: "VF Jobs CH"
 slug: "jobs/vf-jobs"
 domain: "fashionunited.ch"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
@@ -9,7 +9,7 @@ tags:
     - employer-branding
     - EBP
     - other
-template: wide-header
+template: wide
 ---
 
 Die VF Corporation wurde 1899 gegründet und ist einer der Weltmarktführer für Design, Herstellung, Marketing und Vertrieb von Markenkleidung, -schuhen und -accessoires im Bereich Lifestyle.

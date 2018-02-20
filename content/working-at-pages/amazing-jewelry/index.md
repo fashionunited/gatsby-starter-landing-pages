@@ -7,7 +7,7 @@ tags:
     - programming
     - stuff
     - other
-template: wide-header
+template: page
 layout: no-header-footer
 ---
 
