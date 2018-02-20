@@ -5,7 +5,7 @@ backend:
 publish_mode: editorial_workflow
 
 media_folder: static/images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+public_folder: /images/uploads # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
   - name: "blog"
