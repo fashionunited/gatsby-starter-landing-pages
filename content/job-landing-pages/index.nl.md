@@ -6,7 +6,6 @@ category: "job-landing"
 tags:
     - job-landing
 template: job-landing
-layout: no-header-footer
 ---
 
 # Vind modevacatures op de modevacaturebank
