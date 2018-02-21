@@ -4,6 +4,11 @@ stages:
   - build
   - clear-cache
 
+cache:
+  key: cache_yarn
+  paths:
+  - .cache_yarn
+
 pages:
   cache:
     untracked: true
