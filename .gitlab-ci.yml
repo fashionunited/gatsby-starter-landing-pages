@@ -15,9 +15,10 @@ pages:
   # - apk add --no-cache bash git openssh # for alpine
   - npm install sharp@0.17.3 #latest sharp needs newer libvips but that is not in node:8 docker image
   - npm install -sg gatsby # -sg to keep logs short - switch to -g if you want to see errors.
-  - npm install -g firebase-tools
   - npm install -q
   - gatsby build
+  - yarn global add node-gyp
+  - yarn global add firebase-tools --cache-folder ../.cache_yarn
   - firebase use --token $FIREBASE_DEPLOY_KEY production
   - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --token $FIREBASE_DEPLOY_KEY    
 
