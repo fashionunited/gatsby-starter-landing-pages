@@ -26,7 +26,7 @@ pages:
   - yarn build
   - yarn global add node-gyp --cache-folder ../.cache_yarn
   - yarn global add firebase-tools --cache-folder ../.cache_yarn
-  - firebase use --token $FIREBASE_DEPLOY_KEY production
+  - firebase use --token $FIREBASE_DEPLOY_KEY landing-pages-e6d94
   - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --token $FIREBASE_DEPLOY_KEY    
 
   # --prefix-links Needed when NOT using a custom domain instead of GitLab Pages gitlab.io
