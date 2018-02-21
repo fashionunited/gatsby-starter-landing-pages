@@ -26,8 +26,8 @@ pages:
   artifacts:
     paths:
     - public
-  only:
-  - master
+  # only:
+  # - master
 
 clear-cache-cloudflare:
   image: fuww/alpine-curl-ssl-jq:latest
