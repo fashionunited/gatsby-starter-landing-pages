@@ -24,7 +24,7 @@ const Hero = styled.header.attrs({
   background-image: url(${props => props.image});
   background-position: 40% 50%;
 `;
-export default class wideHeaderTemplate extends React.Component {
+export default class wideTemplate extends React.Component {
   render() {
     const { slug } = this.props.pathContext;
     const postNode = this.props.data.markdownRemark;
