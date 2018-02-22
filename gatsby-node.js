@@ -124,6 +124,14 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               component: widePage,
               context: { slug: edge.node.fields.slug }
             });
+          } else if (
+            _.get(edge, "node.frontmatter.template") === "job-landing"
+          ) {
+            createPage({
+              path: edge.node.fields.slug,
+              component: jobLandingPage,
+              context: { slug: edge.node.fields.slug }
+            });
           } else {
             // this is the Default
             createPage({
