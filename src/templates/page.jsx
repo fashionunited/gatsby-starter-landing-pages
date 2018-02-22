@@ -3,7 +3,6 @@ import Helmet from "react-helmet";
 import UserInfo from "../components/UserInfo/UserInfo";
 import Disqus from "../components/Disqus/Disqus";
 import PostTags from "../components/PostTags/PostTags";
-import PostTabs from "../components/PostTabs/PostTabs";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
@@ -49,7 +48,6 @@ export default class PageTemplate extends React.Component {
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <Meta>
             <PostTags tags={post.tags} />
-            <PostTabs tags={post.tabs} />
             <SocialLinks postPath={slug} postNode={postNode} />
           </Meta>
           <UserInfo config={config} />
