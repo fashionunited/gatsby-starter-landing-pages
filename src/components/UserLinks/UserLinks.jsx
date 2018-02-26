@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+import styled, { css } from "react-emotion";
 
 const StyledDiv = styled.div`
   display: flex;

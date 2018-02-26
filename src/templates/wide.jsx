@@ -7,7 +7,7 @@ import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
-import styled from "styled-components";
+import styled, { css } from "react-emotion";
 import { DFPSlotsProvider, AdSlot } from "react-dfp";
 
 const Meta = styled.div`

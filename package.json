@@ -39,9 +39,7 @@
     "react-emotion": "^9.0.2",
     "react-helmet": "^5.2.0",
     "react-share": "^2.0.0",
-    "react-twitter-widgets": "^1.7.1",
-    "rmwc": "^1.2.0",
-    "styled-components": "^3.1.6"
+    "react-twitter-widgets": "^1.7.1"
   },
   "devDependencies": {
     "cli-glob": "^0.1.0",

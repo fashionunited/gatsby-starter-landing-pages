@@ -7,7 +7,7 @@ import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
-import styled from "styled-components";
+import styled, { css } from "react-emotion";
 
 const Title = styled.h1`
   font-size: 1.5em;

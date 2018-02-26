@@ -19,7 +19,7 @@ import {
   generateShareIcon
 } from "react-share";
 import config from "../../../data/SiteConfig";
-import styled from "styled-components";
+import styled, { css } from "react-emotion";
 
 // .social-links > div {
 //   margin: 5px 15px;

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
-import styled from "styled-components";
+import styled, { css } from "react-emotion";
 
 const Title = styled.h1`
   font-size: 1.5em;
