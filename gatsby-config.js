@@ -27,38 +27,17 @@ module.exports = {
 
     "gatsby-plugin-react-helmet",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "posts",
-        path: `${__dirname}/content/${config.blogPostDir}`
+        name: `pages`,
+        path: `${__dirname}/src/pages/`
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `employerbrandingpages`,
-        path: `${__dirname}/content/${config.employerBrandingPagesDir}/`
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `brandingpages`,
-        path: `${__dirname}/content/${config.brandingPagesDir}/`
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `workingatpages`,
-        path: `${__dirname}/content/${config.workingAtPagesDir}/`
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `joblandingpages`,
-        path: `${__dirname}/content/${config.jobLandingPagesDir}/`
+        name: `data`,
+        path: `${__dirname}/src/data/`
       }
     },
     {

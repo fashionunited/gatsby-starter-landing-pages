@@ -4,11 +4,11 @@ module.exports = {
   brandingPagesDir: "branding-pages",
   workingAtPagesDir: "working-at-pages",
   jobLandingPagesDir: "job-landing-pages",
-  siteTitle: "Gatsby Advanced Starter", // Site title.
-  siteTitleAlt: "GatsbyJS Advanced Starter", // Alternative site title for SEO.
+  siteTitle: "Gatsby Starter Blog", // Site title.
+  siteTitleAlt: "GatsbyJS Starter Blog", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://vagr9k.github.io", // Domain of your website without pathPrefix.
-  pathPrefix: "/gatsby-advanced-starter", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+  pathPrefix: "/blog", // Prefixes all links. For cases when deployed to example.github.io/blog/.
   siteDescription:
     "You have to always work against what you did before, and even against your taste.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
@@ -40,7 +40,7 @@ module.exports = {
       iconClassName: "fa fa-envelope"
     }
   ],
-  copyright: "Copyright © 2017. Advanced Jelle", // Copyright string for the footer of the website and RSS feed.
+  copyright: "Copyright ©2018. Advanced Jelle", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0" // Used for setting manifest background color.
 };
