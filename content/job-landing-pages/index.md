@@ -1,5 +1,5 @@
 ---
-title: "Find your fashion job with FashionUnited"
+title: "Find your fashion job with FashionUnited - job-landing template"
 slug: "career-centre"
 domain: "fashionunited.uk"
 template: job-landing

@@ -1,6 +1,6 @@
 ---
-title: "Working at VF"
-slug: "jobs/vf-jobs/working-at"
+title: "EBP working-at - Wide template no layout"
+slug: "jobs/ebp-jobs/working-at"
 domain: "fashionunited.uk"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"
@@ -8,12 +8,9 @@ category: "employer-branding"
 tags:
     - employer-branding
     - EBP
-    - programming
-    - stuff
-    - other
 template: wide
 ---
 
-[jobs](../vf-jobs) [careers](../vf-jobs/careers) [working-at](../vf-jobs/working-at)
+[jobs](../ebp-jobs) [careers](../ebp-jobs/careers) [working-at](../ebp-jobs/working-at)
 
 working at page
