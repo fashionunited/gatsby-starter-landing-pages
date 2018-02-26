@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import Link from "gatsby-link";
 import UserLinks from "../UserLinks/UserLinks";
 import config from "../../../data/SiteConfig";
-import styled from "styled-components";
-
+import styled, { css } from "react-emotion";
 // @media (max-width: 640px - 1px) {
 //   .notice-container {
 //       justify-content: space-around;
@@ -35,6 +34,29 @@ const Wrapper = styled.section`
   padding: 4em;
   background: #666;
 `;
+
+const ulStyle = css`
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 1.45rem;
+  text-transform: uppercase;
+  padding: 0;
+  & a {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.15s ease-in;
+    transition: color 0.15s ease-in;
+    &:hover {
+      text-decoration: none;
+      box-shadow: none;
+      opacity: 1;
+      transition: opacity 0.15s ease-in;
+    }
+  }
+  & li {
+    margin: 0;
+  }
+`;
 class Footer extends Component {
   render() {
     // const { config } = this.props;
@@ -49,6 +71,17 @@ class Footer extends Component {
         <Wrapper>
           <div className="notice-container">
             <h1>FOOTER Advanced Jelle Footer</h1>
+            <ul className={ulStyle}>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/privacy-policy">Privacy Policy</Link>
+              </li>
+              <li>
+                <Link to="/terms-of-service">Terms of Service</Link>
+              </li>
+            </ul>
             <NoticeContainerH4>{copyright}</NoticeContainerH4>
             <NoticeContainerH4>
               Based on{" "}

@@ -1,12 +1,17 @@
 {
   "name": "gatsby-starter-advanced",
-  "description": "GatsbyJS starter that includes examples for advanced use cases.",
+  "description":
+    "GatsbyJS starter that includes examples for advanced use cases.",
   "version": "1.1.0",
   "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
   "dependencies": {
+    "babel-plugin-emotion": "^9.0.1",
     "babel-plugin-lodash": "^3.3.2",
+    "emotion": "^9.0.2",
+    "emotion-server": "^9.0.2",
     "gatsby": "^1.9.149",
     "gatsby-link": "^1.6.32",
+    "gatsby-plugin-emotion": "^1.1.8",
     "gatsby-plugin-catch-links": "^1.0.14",
     "gatsby-plugin-feed": "^1.3.15",
     "gatsby-plugin-google-analytics": "^1.0.14",
@@ -31,6 +36,7 @@
     "react": "^15.6.1",
     "react-disqus-comments": "^1.1.1",
     "react-dom": "^15.6.1",
+    "react-emotion": "^9.0.2",
     "react-helmet": "^5.2.0",
     "react-share": "^2.0.0",
     "react-twitter-widgets": "^1.7.1",
@@ -45,6 +51,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.5.1",
+    "jest": "^21.2.1",
     "gh-pages": "^1.1.0",
     "prettier": "^1.9.2",
     "react-dfp": "^0.6.0",
@@ -55,16 +62,14 @@
     "stylelint-config-standard": "^18.0.0",
     "write-good": "^0.11.3"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "develop": "gatsby develop",
-    "dev": "npm run develop",
+    "dev": "node_modules/.bin/gatsby develop",
+    "build": "node_modules/.bin/gatsby build",
     "serve": "gatsby serve",
-    "build": "gatsby build",
     "build:pp": "gatsby build --prefix-paths",
     "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",
     "clean": "rm -rf public",
@@ -74,8 +79,6 @@
     "format:js": "prettier '**/*.{js,jsx}' --write"
   },
   "remarkConfig": {
-    "plugins": [
-      "remark-preset-lint-recommended"
-    ]
+    "plugins": ["remark-preset-lint-recommended"]
   }
 }
