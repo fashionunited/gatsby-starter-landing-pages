@@ -16,6 +16,9 @@ module.exports = {
       copyright: config.copyright
     }
   },
+  mapping: {
+    "MarkdownRemark.frontmatter.author": "AuthorsYaml"
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-google-tagmanager`,
@@ -73,6 +76,8 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-transformer-json",
+    "gatsby-transformer-yaml",
     "gatsby-plugin-catch-links",
     "gatsby-plugin-twitter",
     "gatsby-plugin-sitemap",
