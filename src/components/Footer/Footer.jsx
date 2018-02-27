@@ -70,7 +70,7 @@ class Footer extends Component {
         <UserLinks config={config} labeled />
         <Wrapper>
           <div className="notice-container">
-            <h1>FOOTER Advanced Jelle Footer</h1>
+            <h1>Footer</h1>
             <ul className={ulStyle}>
               <li>
                 <Link to="/">Home</Link>
