@@ -1,12 +1,45 @@
 import React from "react";
+import styled, { injectGlobal } from "react-emotion";
+import { fontSize } from "styled-system";
 import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
 import "./index.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer/Footer";
+import colors from "../utils/colors";
 
 /* eslint-disable */
 import normalize from "normalize.css";
+injectGlobal`
+  * {
+      font-family: -apple-system, BlinkMacSystemFont,
+             'avenir next', avenir,
+             'helvetica neue', helvetica,
+             ubuntu,
+             roboto, noto,
+             'segoe ui', arial,
+             sans-serif;
+      box-sizing: border-box;
+  };
+  a {
+    text-decoration: none;
+    color: inherit;
+  };
+  a:hover {
+    cursor: pointer;
+  };
+  h1, h2, h3, h4, h5, h6 {
+    color: ${colors.secondary}
+  };
+  p {
+    color: ${colors.accent}
+  }
+`;
+/* eslint-enable */
+
+const FontConfig = styled.div`
+  ${fontSize};
+`;
 
 export default class MainLayout extends React.Component {
   getLocalTitle() {
@@ -46,7 +79,7 @@ export default class MainLayout extends React.Component {
   render() {
     const { children } = this.props;
     return (
-      <div>
+      <FontConfig fontSize={[2, 3, 4]}>
         <Helmet>
           <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
           <meta name="description" content={config.siteDescription} />
@@ -54,7 +87,7 @@ export default class MainLayout extends React.Component {
         <Header />
         {children()}
         <Footer />
-      </div>
+      </FontConfig>
     );
   }
 }
