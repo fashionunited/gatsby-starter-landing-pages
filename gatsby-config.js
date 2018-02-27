@@ -49,6 +49,14 @@ module.exports = {
         path: `${__dirname}/src/images/`
       }
     },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-transformer-json",
+    "gatsby-transformer-yaml",
+    "gatsby-plugin-catch-links",
+    "gatsby-plugin-twitter",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-emotion",
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -74,14 +82,7 @@ module.exports = {
         color: config.themeColor
       }
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    "gatsby-transformer-json",
-    "gatsby-transformer-yaml",
-    "gatsby-plugin-catch-links",
-    "gatsby-plugin-twitter",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-emotion",
+
     {
       resolve: "gatsby-plugin-manifest",
       options: {
