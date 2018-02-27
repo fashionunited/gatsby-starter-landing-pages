@@ -2,7 +2,6 @@ import React from "react";
 import styled, { injectGlobal } from "react-emotion";
 import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
-import "./index.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer/Footer";
 import colors from "../utils/colors";
@@ -20,6 +19,9 @@ injectGlobal`
              sans-serif;
       box-sizing: border-box;
   };
+  html {
+    height: 100%;
+  }
   a {
     text-decoration: none;
     color: inherit;

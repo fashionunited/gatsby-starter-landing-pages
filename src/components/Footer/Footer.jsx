@@ -16,9 +16,14 @@ const StyledFooter = styled.footer`
   color: white;
 `;
 
+const NoticeContainerH1 = styled.h1`
+  color: white;
+`;
+
 const NoticeContainerH4 = styled.h4`
   text-align: center;
   margin: 0;
+  color: white;
 `;
 
 const NoticeContainer = styled.div`
@@ -70,7 +75,7 @@ class Footer extends Component {
         <UserLinks config={config} labeled />
         <Wrapper>
           <div className="notice-container">
-            <h1>Footer</h1>
+            <NoticeContainerH1>Footer</NoticeContainerH1>
             <ul className={ulStyle}>
               <li>
                 <Link to="/">Home</Link>
