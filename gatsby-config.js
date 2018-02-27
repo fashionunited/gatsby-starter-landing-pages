@@ -24,7 +24,6 @@ module.exports = {
         includeInDevelopment: false
       }
     },
-
     "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-source-filesystem`,
@@ -38,6 +37,13 @@ module.exports = {
       options: {
         name: `data`,
         path: `${__dirname}/src/data/`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`
       }
     },
     {
@@ -66,6 +72,7 @@ module.exports = {
       }
     },
     "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     "gatsby-plugin-catch-links",
     "gatsby-plugin-twitter",
     "gatsby-plugin-sitemap",

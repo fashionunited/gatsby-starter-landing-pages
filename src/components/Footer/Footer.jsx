@@ -86,6 +86,9 @@ class Footer extends Component {
               <li>
                 <Link to="/terms-of-service">Terms of Service</Link>
               </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
             </ul>
             <NoticeContainerH4>{copyright}</NoticeContainerH4>
             <NoticeContainerH4>
