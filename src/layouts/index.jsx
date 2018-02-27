@@ -5,6 +5,9 @@ import "./index.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer/Footer";
 
+/* eslint-disable */
+import normalize from "normalize.css";
+
 export default class MainLayout extends React.Component {
   getLocalTitle() {
     function capitalize(string) {
