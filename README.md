@@ -2,13 +2,11 @@
 [![Issue Count](https://codeclimate.com/github/fashionunited/gatsby-starter-landing-pages/badges/issue_count.svg)](https://codeclimate.com/github/fashionunited/gatsby-starter-landing-pages)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/990fb54ea8094f2aa0ed77f14e859820)](https://www.codacy.com/app/fashionunited/gatsby-starter-landing-pages?utm_source=github.com&utm_medium=referral&utm_content=fashionunited/gatsby-starter-landing-pages&utm_campaign=Badge_Grade)
 
-<div align="center">
-    <img src="static/logos/logo-1024.png" alt="Logo" width='200px' height='200px'/>
-</div>
-
-# Gatsby Starter Blog
+# Gatsby Starter Landing Pages
 
 A blog starter skeleton with advanced features for [Gatsby](https://github.com/gatsbyjs/gatsby/).
+
+Inspired by both [Gatsby Advanced Starter](https://github.com/Vagr9K/gatsby-advanced-starter) & [Gatsby Starter Gatsbythemes](https://github.com/saschajullmann/gatsby-starter-gatsbythemes).
 
 ## Deploy to Firebase Hosting
 
@@ -21,7 +19,7 @@ Store the token you get as variable FIREBASE_DEPLOY_KEY in GitLab. This is used 
 
 This project aims to provide a minimal for building GatsbyJS powered blogs.
 
-It doesn't define any UI limitations in any way, and only gives you the basic components for SEO/Social Media/etc.
+It provides basic components for SEO/Social Media/UI. Since we believe in the power of CSS-in-JS, Emotion is included for styling.
 
 You are free to use any UI framework/styling options available to you.
 
@@ -39,50 +37,67 @@ If you are interested in a foundation for building ultra-fast websites, you can 
 
 ## Features
 
-* Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
-* Separate components for everything
-* High configurability:
+* Images with Blur-Up technique
+
+* CSS-in-JS via [Emotion](https://github.com/emotion-js/emotion).
+  <!-- * Jest and Enzyme for testing.
+* Eslint in dev mode with the airbnb config and prettier formatting rules.
+* React 16.
+  <!-- * A basic blog, with posts under src/pages/blog. There's also a script which creates a new Blog entry (post.sh). -->
+* Data per JSON files.
+  <!-- * A few basic components (Navigation, Footer, Layout).
+* Layout components make use of [Styled-System](https://github.com/jxnblk/styled-system).
+* Google Analytics (you just have to enter your tracking-id).
+* Gatsby-Plugin-Offline which includes Service Workers.
+* [Prettier](https://github.com/prettier/prettier) for a uniform codebase.
+* [Normalize](https://github.com/necolas/normalize.css/) css (7.0).
+* [Feather](https://feather.netlify.com/) icons.
+* Font styles taken from [Tachyons](http://tachyons.io/). --> -->
+
+- Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
+- Separate components for everything
+- High configurability:
   * User information
   * User social profiles
   * Copyright information
   * More!
-* Author segment
+- Author segment
   * Name
   * Location
   * Description
   * Links
   * Follow Me button
-* Posts in Markdown
+- Posts in Markdown
   * Code syntax highlighting
   * Embed YouTube videos
   * Embed Tweets
-* Tags
+- Tags
   * Separate page for posts under each tag
-* Categories
+- Categories
   * Separate page for posts under each category
-* Disqus support
+- Disqus support
   * Notifications about new disqus comments
-* Google Analytics support
-* NPM scripts for GitHub Pages deployment
-* Social features
+- Google Analytics support
+- NPM scripts for GitHub Pages deployment
+- Social features
   * Twitter tweet button
   * Facebook share/share count
   * Reddit share/share count
   * Google+ share button
   * LinkedIn share button
   * Telegram share button
-* SEO
+- SEO
   * Sitemap generation
   * robots.txt
   * General description tags
   * Schema.org JSONLD (Google Rich Snippets)
   * OpenGraph Tags (Facebook/Google+/Pinterest)
   * Twitter Tags (Twitter Cards)
-* RSS feeds
-* Loading progress for slow networks
-* Offline support
-* Web App Manifest support
-* Development tools
+- RSS feeds
+- Loading progress for slow networks
+- Offline support
+- Web App Manifest support
+- Development tools
   * ESLint for linting
   * Prettier for code style
   * Remark-Lint for linting Markdown

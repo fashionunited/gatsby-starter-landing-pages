@@ -94,7 +94,11 @@ class Footer extends Component {
             <NoticeContainerH4>
               Based on{" "}
               <a href="https://github.com/Vagr9K/gatsby-advanced-starter">
-                Gatsby Starter Blog
+                Gatsby Advanced Starter
+              </a>{" "}
+              &{" "}
+              <a href="https://github.com/saschajullmann/gatsby-starter-gatsbythemes">
+                Gatsby Starter Gatsbythemes
               </a>.
             </NoticeContainerH4>
           </div>

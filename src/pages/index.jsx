@@ -1,43 +1,44 @@
+/* eslint-disable no-undef, react/prop-types */
 import React from "react";
-import Helmet from "react-helmet";
-import PostListing from "../components/PostListing/PostListing";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
+import Link from "gatsby-link";
+import colors from "../utils/colors";
 
-class Index extends React.Component {
-  render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
-    return (
-      <div className="index-container">
-        <Helmet title={config.siteTitle} />
-        <SEO postEdges={postEdges} />
-        <PostListing postEdges={postEdges} />
-      </div>
-    );
-  }
-}
+export default ({ data }) => {
+  const myData = data.allContentJson.edges[0].node.index;
+  return (
+    <div>
+      <h1>{myData.title}</h1>
+      <h3>{myData.subtitle}</h3>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/blog">Blog</Link>
+        </li>
+        <li>
+          <Link to="/images">Images - Blur-Up & Prefer WebP</Link>
+        </li>
 
-export default Index;
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+      </ul>
 
-/* eslint no-undef: "off"*/
+      <h1>This could be another section</h1>
+      <p>With another text object</p>
+    </div>
+  );
+};
+
 export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
+  query contentQuery {
+    allContentJson {
       edges {
         node {
-          fields {
-            slug
-          }
-          excerpt
-          timeToRead
-          frontmatter {
+          index {
             title
-            tags
-            cover
-            date
+            subtitle
           }
         }
       }
