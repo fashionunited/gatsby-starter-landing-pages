@@ -33,8 +33,9 @@ If you are a newcomer to Gatsby who's interested in the implementations of most 
 
 If you are interested in a foundation for building ultra-fast websites, you can use this project as a "minimal" starter.
 
-[Demo website.](https://fashionunited.github.io/gatsby-starter-landing-pages/)
-[Demo website.](https://landing-pages-e6d94.firebaseapp.com/)
+[Demo website GitHub Pages.](https://fashionunited.github.io/gatsby-starter-landing-pages/)
+[Demo website Firebase Hosting](https://gatsby-starter-landing-pages.firebaseapp.com/)
+[Compare latency with Apex.sh](https://latency.apex.sh/?url=https%3A%2F%2Ffashionunited.com&compare=https%3A%2F%2Fgatsby-starter-landing-pages.firebaseapp.com/)
 
 ## Features
 
