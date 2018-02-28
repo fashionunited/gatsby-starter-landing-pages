@@ -10,6 +10,13 @@
 
 A blog starter skeleton with advanced features for [Gatsby](https://github.com/gatsbyjs/gatsby/).
 
+## Deploy to Firebase Hosting
+
+    firebase init
+    firebase login:ci
+
+Store the token you get as variable FIREBASE_DEPLOY_KEY in GitLab. This is used in .gitlab-ci.yml to deploy to Firebase Hosting.
+
 ## Why?
 
 This project aims to provide a minimal for building GatsbyJS powered blogs.
