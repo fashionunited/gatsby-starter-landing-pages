@@ -1,6 +1,7 @@
 {
   "name": "gatsby-starter-advanced",
-  "description": "GatsbyJS starter that includes examples for advanced use cases.",
+  "description":
+    "GatsbyJS starter that includes examples for advanced use cases.",
   "version": "1.1.0",
   "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
   "dependencies": {
@@ -64,9 +65,7 @@
     "stylelint-config-standard": "^18.0.0",
     "write-good": "^0.11.3"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -76,7 +75,7 @@
     "serve": "gatsby serve",
     "build:pp": "gatsby build --prefix-paths",
     "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",
-    "deploy": "firebase deploy",
+    "build:fire": "gatsby build && firebase deploy",
     "clean": "rm -rf public",
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:md": "remark content/posts/",
@@ -84,8 +83,6 @@
     "format:js": "prettier '**/*.{js,jsx}' --write"
   },
   "remarkConfig": {
-    "plugins": [
-      "remark-preset-lint-recommended"
-    ]
+    "plugins": ["remark-preset-lint-recommended"]
   }
 }
