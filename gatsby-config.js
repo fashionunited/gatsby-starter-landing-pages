@@ -20,10 +20,11 @@ module.exports = {
     "MarkdownRemark.frontmatter.author": "AuthorsYaml"
   },
   plugins: [
+    "gatsby-plugin-emotion",
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        id: "GTM-P5MJX6K",
+        id: `${config.googleTagManagerID}`,
         includeInDevelopment: false
       }
     },
@@ -56,7 +57,6 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-twitter",
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-emotion",
     {
       resolve: "gatsby-transformer-remark",
       options: {

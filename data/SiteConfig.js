@@ -14,6 +14,7 @@ module.exports = {
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "1825356251115265", // FB Application ID for using app insights
   googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
+  googleTagManagerID: "GTM-P5MJX6K",
   disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
   postDefaultCategoryID: "Fashion", // Default category for posts.
   userName: "Fashionable user", // Username to display in the author segment.
