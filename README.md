@@ -17,19 +17,15 @@ Store the token you get as variable FIREBASE_DEPLOY_KEY in GitLab. This is used 
 
 ## Why?
 
-This project aims to provide a minimal for building GatsbyJS powered blogs.
+This project aims to provide an opiniated minimal for building GatsbyJS powered blogs.
 
 It provides basic components for SEO/Social Media/UI. Since we believe in the power of CSS-in-JS, Emotion is included for styling.
 
-You are free to use any UI framework/styling options available to you.
-
-NOTE: This project serves as a base for [Gatsby Starter Landing Pages Material Web Components](https://github.com/fashionunited/gatsby-starter-landing-pages-material-web-components).
+NOTE: This project serves as a base for [Gatsby Starter Landing Pages Material Web Components](https://github.com/fashionunited/gatsby-starter-landing-pages-material-web-components). That project uses React Material Web Components to implement Material Design as close to what Google intended as possible.
 
 ## How can I use this?
 
-If you are a newcomer to Gatsby who's interested in the implementations of most needed features, this is a great place to start.
-
-If you are interested in a foundation for building ultra-fast websites, you can use this project as a "minimal" starter.
+If you are interested in building websites that are highly optimized, for SEO and performance, you can use this an unstyled, "minimal" starter.
 
 [Demo website GitHub Pages.](https://fashionunited.github.io/gatsby-starter-landing-pages/)
 [Demo website Firebase Hosting](https://gatsby-starter-landing-pages.firebaseapp.com/)
@@ -136,23 +132,27 @@ Edit the export object in `data/SiteConfig`:
 ```js
 module.exports = {
   blogPostDir: "sample-posts", // The name of directory that contains your posts.
-  siteTitle: "Gatsby Starter Blog", // Site title.
-  siteTitleAlt: "GatsbyJS Advanced Starter", // Alternative site title for SEO.
+  employerBrandingPagesDir: "employer-branding-pages",
+  brandingPagesDir: "branding-pages",
+  workingAtPagesDir: "working-at-pages",
+  jobLandingPagesDir: "job-landing-pages",
+  siteTitle: "Gatsby Starter Landing Pages", // Site title.
+  siteTitleAlt: "GatsbyJS Starter Landing Pages", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://fashionunited.github.io", // Domain of your website without pathPrefix.
-  pathPrefix: "/gatsby-starter-landing-pages", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-landing-pages/.
-  siteDescription:
-    "A blog starter skeleton with advanced features for for GatsbyJS", // Website description used for RSS feeds/meta description tag.
+  pathPrefix: "/blog", // Prefixes all links. For cases when deployed to example.github.io/blog/.
+  siteDescription: "If you do what you did, you get what you got.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  siteFBAppID: "1825356251115265", // FB Application ID for using app insights
+  siteFBAppID: "XXXXXXXXXXXXXXXX", // FB Application ID for using app insights
+  googleTagManagerID: "GTM-XXXXXXX",
   disqusShortname: "https-fashionunited-github-io-gatsby-starter-landing-pages", // Disqus shortname.
-  postDefaultCategoryID: "Tech", // Default category for posts.
-  userName: "Advanced User", // Username to display in the author segment.
+  postDefaultCategoryID: "Fashion", // Default category for posts.
+  userName: "Fashionista", // Username to display in the author segment.
   userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: "North Pole, Earth", // User location to display in the author segment.
+  userLocation: "Catwalk, Paris", // User location to display in the author segment.
   userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
   userDescription:
-    "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
+    "I didn't consider myself a fashion designer at all at the time of punk. I was just using fashion as a way to express my resistance and to be rebellious. I came from the country, and by the time I got to London, I considered myself to be very stupid. It was my ambition to understand the world I live in.", // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
     {
@@ -167,11 +167,11 @@ module.exports = {
     },
     {
       label: "Email",
-      url: "mailto:fashionunited@gmail.com",
+      url: "mailto:info@fashionunited.com",
       iconClassName: "fa fa-envelope"
     }
   ],
-  copyright: "Copyright © 2017. Advanced User", // Copyright string for the footer of the website and RSS feed.
+  copyright: "Copyright ©2018. ", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0" // Used for setting manifest background color.
 };

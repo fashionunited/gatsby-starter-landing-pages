@@ -4,20 +4,18 @@ module.exports = {
   brandingPagesDir: "branding-pages",
   workingAtPagesDir: "working-at-pages",
   jobLandingPagesDir: "job-landing-pages",
-  siteTitle: "Gatsby Starter Blog", // Site title.
-  siteTitleAlt: "GatsbyJS Starter Blog", // Alternative site title for SEO.
+  siteTitle: "Gatsby Starter Landing Pages", // Site title.
+  siteTitleAlt: "GatsbyJS Starter Landing Pages", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
-  siteUrl: "https://vagr9k.github.io", // Domain of your website without pathPrefix.
+  siteUrl: "https://fashionunited.github.io", // Domain of your website without pathPrefix.
   pathPrefix: "/blog", // Prefixes all links. For cases when deployed to example.github.io/blog/.
-  siteDescription:
-    "You have to always work against what you did before, and even against your taste.", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "If you do what you did, you get what you got.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  siteFBAppID: "1825356251115265", // FB Application ID for using app insights
-  googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
-  googleTagManagerID: "GTM-P5MJX6K",
-  disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
+  siteFBAppID: "XXXXXXXXXXXXXXXX", // FB Application ID for using app insights
+  googleTagManagerID: "GTM-XXXXXXX",
+  disqusShortname: "https-fashionunited-github-io-gatsby-starter-landing-pages", // Disqus shortname.
   postDefaultCategoryID: "Fashion", // Default category for posts.
-  userName: "Fashionable user", // Username to display in the author segment.
+  userName: "Fashionista", // Username to display in the author segment.
   userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "Catwalk, Paris", // User location to display in the author segment.
   userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
@@ -27,17 +25,17 @@ module.exports = {
   userLinks: [
     {
       label: "GitHub",
-      url: "https://github.com/Vagr9K/gatsby-advanced-starter",
+      url: "https://github.com/fashionunited/gatsby-starter-landing-pages",
       iconClassName: "fa fa-github"
     },
     {
       label: "Twitter",
-      url: "https://twitter.com/Vagr9K",
+      url: "https://twitter.com/fashionunited",
       iconClassName: "fa fa-twitter"
     },
     {
       label: "Email",
-      url: "mailto:vagr9k@gmail.com",
+      url: "mailto:info@fashionunited.com",
       iconClassName: "fa fa-envelope"
     }
   ],
