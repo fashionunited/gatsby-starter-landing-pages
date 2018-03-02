@@ -30,6 +30,7 @@ If you are interested in building websites that are highly optimized, for SEO an
 [Demo website GitHub Pages.](https://fashionunited.github.io/gatsby-starter-landing-pages/)
 [Demo website Firebase Hosting](https://gatsby-starter-landing-pages.firebaseapp.com/)
 [Compare latency with Apex.sh](https://latency.apex.sh/?url=https%3A%2F%2Ffashionunited.com&compare=https%3A%2F%2Fgatsby-starter-landing-pages.firebaseapp.com/)
+[GitHub Pages vs Firebase](https://latency.apex.sh/?url=https%3A%2F%2Ffashionunited.github.io/gatsby-starter-landing-pages/&compare=https%3A%2F%2Fgatsby-starter-landing-pages.firebaseapp.com/)
 
 ## Features
 
