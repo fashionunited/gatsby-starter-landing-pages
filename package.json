@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-advanced",
-  "description":
-    "GatsbyJS starter that includes examples for advanced use cases.",
+  "name": "gatsby-starter-landing-pages",
+  "description": "GatsbyJS starter with landing pages and advanced SEO.",
   "version": "1.1.0",
-  "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
+  "author": "Joost van der Laan <joost@fashionunited.com>",
   "dependencies": {
     "babel-plugin-emotion": "^9.0.1",
     "babel-plugin-lodash": "^3.3.2",
@@ -77,7 +76,7 @@
     "build:fire": "gatsby build && firebase deploy",
     "clean": "rm -rf public",
     "lint:js": "eslint --ext .js,.jsx .",
-    "lint:md": "remark content/posts/",
+    "lint:md": "remark src/pages/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
     "format:js": "prettier '**/*.{js,jsx}' --write"
   },

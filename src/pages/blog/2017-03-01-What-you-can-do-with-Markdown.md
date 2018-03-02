@@ -1,13 +1,14 @@
 ---
-title: "Big Test"
+title: "What you can do with Markdown"
 template: post
 cover: "https://unsplash.it/400/300/?random?BigTest"
-category: "moar"
+category: "markdown"
 date: "01/03/2018"
 slug: "Big-Sample_Test"
 tags:
     - test
     - huge
+    - markdown
 ---
 
 # NOTE: This "post" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents.
