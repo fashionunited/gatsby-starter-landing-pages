@@ -1,0 +1,2 @@
+webpackJsonp([0x63c62a4ba499],{454:function(t,e){t.exports={data:{allMarkdownRemark:{totalCount:1,edges:[{node:{fields:{slug:"/blog/2017-03-01-Birch-in-the-Roses/"},excerpt:"Domos primus caelum taedia Accipit alto fecerat mutato centauri haerent dominoque Lorem markdownum nunc fuerat vulgaris ipse. Profecisse…",timeToRead:1,frontmatter:{title:"Birch in the Roses",tags:["tag"],cover:"https://unsplash.it/1152/300/?random?BirchintheRoses",date:"01/03/2017"}}}]}},pathContext:{tag:"tag"}}}});
+//# sourceMappingURL=path---tags-tag-18b78eca9113a265e4ef.js.map
