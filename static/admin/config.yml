@@ -10,7 +10,7 @@ public_folder: /images/uploads # The src attribute for uploaded media will begin
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "content/sample-posts"
+    folder: "src/pages/blog"
     create: true
     fields:
       - {label: "Template Key", name: "template", widget: "hidden", default: "post"}
