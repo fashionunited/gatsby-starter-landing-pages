@@ -17,7 +17,7 @@ Store the token you get as variable FIREBASE_DEPLOY_KEY in GitLab. This is used 
 
 ## Why?
 
-This project aims to provide an opiniated minimal for building GatsbyJS powered blogs.
+This project aims to provide a minimal for building GatsbyJS powered blogs.
 
 It provides basic components for SEO/Social Media/UI. Since we believe in the power of CSS-in-JS, Emotion is included for styling.
 
