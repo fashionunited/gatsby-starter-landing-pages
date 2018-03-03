@@ -6,6 +6,11 @@
 
 A blog starter skeleton with advanced features for [Gatsby](https://github.com/gatsbyjs/gatsby/).
 
+* [Demo website GitHub Pages.](https://fashionunited.github.io/gatsby-starter-landing-pages/)
+* [Demo website Firebase Hosting](https://gatsby-starter-landing-pages.firebaseapp.com/)
+* [Compare latency with Apex.sh](https://latency.apex.sh/?url=https%3A%2F%2Ffashionunited.com&compare=https%3A%2F%2Fgatsby-starter-landing-pages.firebaseapp.com/)
+* [GitHub Pages vs Firebase](https://latency.apex.sh/?url=https%3A%2F%2Ffashionunited.github.io/gatsby-starter-landing-pages/&compare=https%3A%2F%2Fgatsby-starter-landing-pages.firebaseapp.com/)
+
 Inspired by both [Gatsby Advanced Starter](https://github.com/Vagr9K/gatsby-advanced-starter) & [Gatsby Starter Gatsbythemes](https://github.com/saschajullmann/gatsby-starter-gatsbythemes).
 
 ## Deploy to Firebase Hosting
@@ -27,11 +32,6 @@ NOTE: This project serves as a base for [Gatsby Starter Landing Pages Material W
 
 If you are interested in building websites that are highly optimized, for SEO and performance, you can use this an unstyled, "minimal" starter.
 
-[Demo website GitHub Pages.](https://fashionunited.github.io/gatsby-starter-landing-pages/)
-[Demo website Firebase Hosting](https://gatsby-starter-landing-pages.firebaseapp.com/)
-[Compare latency with Apex.sh](https://latency.apex.sh/?url=https%3A%2F%2Ffashionunited.com&compare=https%3A%2F%2Fgatsby-starter-landing-pages.firebaseapp.com/)
-[GitHub Pages vs Firebase](https://latency.apex.sh/?url=https%3A%2F%2Ffashionunited.github.io/gatsby-starter-landing-pages/&compare=https%3A%2F%2Fgatsby-starter-landing-pages.firebaseapp.com/)
-
 ## Features
 
 * Images with Blur-Up technique
@@ -39,7 +39,7 @@ If you are interested in building websites that are highly optimized, for SEO an
 * CSS-in-JS via [Emotion](https://github.com/emotion-js/emotion).
   <!-- * Jest and Enzyme for testing.
 * Eslint in dev mode with the airbnb config and prettier formatting rules.
-* React 16.
+* React 16. -->
   <!-- * A basic blog, with posts under src/pages/blog. There's also a script which creates a new Blog entry (post.sh). -->
 * Data per JSON files.
   <!-- * A few basic components (Navigation, Footer, Layout).
@@ -49,7 +49,7 @@ If you are interested in building websites that are highly optimized, for SEO an
 * [Prettier](https://github.com/prettier/prettier) for a uniform codebase.
 * [Normalize](https://github.com/necolas/normalize.css/) css (7.0).
 * [Feather](https://feather.netlify.com/) icons.
-* Font styles taken from [Tachyons](http://tachyons.io/). --> -->
+* Font styles taken from [Tachyons](http://tachyons.io/). -->
 
 - Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
 - Separate components for everything
