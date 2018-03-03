@@ -8,7 +8,7 @@ module.exports = {
   siteTitleAlt: "GatsbyJS Starter Landing Pages", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://fashionunited.github.io", // Domain of your website without pathPrefix.
-  pathPrefix: "/blog", // Prefixes all links. For cases when deployed to example.github.io/blog/.
+  pathPrefix: "/gatsby-starter-landing-pages", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-landing-pages/.
   siteDescription: "If you do what you did, you get what you got.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "XXXXXXXXXXXXXXXX", // FB Application ID for using app insights
