@@ -1,13 +1,15 @@
-[![Code Climate](https://codeclimate.com/github/fashionunited/gatsby-starter-landing-pages/badges/gpa.svg)](https://codeclimate.com/github/fashionunited/gatsby-starter-landing-pages)
-[![Issue Count](https://codeclimate.com/github/fashionunited/gatsby-starter-landing-pages/badges/issue_count.svg)](https://codeclimate.com/github/fashionunited/gatsby-starter-landing-pages)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/990fb54ea8094f2aa0ed77f14e859820)](https://www.codacy.com/app/fashionunited/gatsby-starter-landing-pages?utm_source=github.com&utm_medium=referral&utm_content=fashionunited/gatsby-starter-landing-pages&utm_campaign=Badge_Grade)
 
 # Gatsby Starter Landing Pages
 
 A blog starter skeleton with advanced features for [Gatsby](https://github.com/gatsbyjs/gatsby/).
 
-* [Demo website GitHub Pages.](https://fashionunited.github.io/gatsby-starter-landing-pages/)
-* [Demo website Firebase Hosting](https://gatsby-starter-landing-pages.firebaseapp.com/)
+* [Demo website on GitHub Pages.](https://fashionunited.github.io/gatsby-starter-landing-pages/)
+
+For performance comparisons the demo is also hosted on:
+
+* [Firebase Hosting](https://gatsby-starter-landing-pages.firebaseapp.com/)
+* [Netlify](https://gatsby-landing-pages.netlify.com/)
 * [Compare latency with Apex.sh](https://latency.apex.sh/?url=https%3A%2F%2Ffashionunited.com&compare=https%3A%2F%2Fgatsby-starter-landing-pages.firebaseapp.com/)
 * [GitHub Pages vs Firebase](https://latency.apex.sh/?url=https%3A%2F%2Ffashionunited.github.io/gatsby-starter-landing-pages/&compare=https%3A%2F%2Fgatsby-starter-landing-pages.firebaseapp.com/)
 
