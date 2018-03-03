@@ -10,8 +10,12 @@ For performance comparisons the demo is also hosted on:
 
 * [Firebase Hosting](https://gatsby-starter-landing-pages.firebaseapp.com/)
 * [Netlify](https://gatsby-landing-pages.netlify.com/)
-* [Compare latency with Apex.sh](https://latency.apex.sh/?url=https%3A%2F%2Ffashionunited.com&compare=https%3A%2F%2Fgatsby-starter-landing-pages.firebaseapp.com/)
+
+Compare latency with Apex.sh, this is far from a scientific method though.
+
 * [GitHub Pages vs Firebase](https://latency.apex.sh/?url=https%3A%2F%2Ffashionunited.github.io/gatsby-starter-landing-pages/&compare=https%3A%2F%2Fgatsby-starter-landing-pages.firebaseapp.com/)
+* [GitHub Pages vs Netlify](https://latency.apex.sh/?url=https%3A%2F%2Ffashionunited.github.io/gatsby-starter-landing-pages/&compare=https%3A%2F%2Fgatsby-landing-pages.netlify.com/)
+* [Firebase vs Netlify](https://latency.apex.sh/?url=https%3A%2F%2Fgatsby-starter-landing-pages.firebaseapp.com/&compare=https%3A%2F%2Fgatsby-landing-pages.netlify.com/)
 
 Inspired by both [Gatsby Advanced Starter](https://github.com/Vagr9K/gatsby-advanced-starter) & [Gatsby Starter Gatsbythemes](https://github.com/saschajullmann/gatsby-starter-gatsbythemes).
 
