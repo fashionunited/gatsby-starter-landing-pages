@@ -1,7 +1,11 @@
 import React from "react";
 import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
-import "./index.css";
+
+import normalize from "normalize.css";
+// import "material-components-web/dist/material-components-web.min.css";
+// import "typeface-roboto";
+// import "material-design-icons/iconfont/material-icons.css";
 
 export default class MainLayout extends React.Component {
   getLocalTitle() {

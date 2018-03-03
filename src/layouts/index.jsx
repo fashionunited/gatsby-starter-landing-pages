@@ -8,6 +8,12 @@ import colors from "../utils/colors";
 
 /* eslint-disable */
 import normalize from "normalize.css";
+// import "material-components-web/dist/material-components-web.min.css";
+// require("material-components-web/dist/material-components-web.min.css");
+import "./index.scss";
+import "typeface-roboto";
+import "material-design-icons/iconfont/material-icons.css";
+
 injectGlobal`
   * {
       font-family: -apple-system, BlinkMacSystemFont,
