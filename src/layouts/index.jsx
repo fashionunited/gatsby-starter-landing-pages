@@ -16,13 +16,6 @@ import "material-design-icons/iconfont/material-icons.css";
 
 injectGlobal`
   * {
-      font-family: -apple-system, BlinkMacSystemFont,
-             'avenir next', avenir,
-             'helvetica neue', helvetica,
-             ubuntu,
-             roboto, noto,
-             'segoe ui', arial,
-             sans-serif;
       box-sizing: border-box;
   };
   html {

@@ -4,6 +4,8 @@ import PostListing from "../../components/PostListing/PostListing";
 import SEO from "../../components/SEO/SEO";
 import config from "../../../data/SiteConfig";
 
+import { Grid, GridCell } from "rmwc/Grid";
+
 class Index extends React.Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
@@ -11,7 +13,9 @@ class Index extends React.Component {
       <div className="index-container">
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} />
-        <PostListing postEdges={postEdges} />
+        <Grid>
+          <PostListing postEdges={postEdges} />
+        </Grid>
       </div>
     );
   }
