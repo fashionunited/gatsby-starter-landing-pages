@@ -28,7 +28,8 @@ class PostListing extends React.Component {
         title: postEdge.node.frontmatter.title,
         date: postEdge.node.frontmatter.date,
         excerpt: postEdge.node.excerpt,
-        timeToRead: postEdge.node.timeToRead
+        timeToRead: postEdge.node.timeToRead,
+        author: postEdge.node.frontmatter.author.id
       });
     });
     return postList;
@@ -61,7 +62,7 @@ class PostListing extends React.Component {
                       theme="text-secondary-on-background"
                       style={{ marginTop: "-1rem" }}
                     >
-                      by Kurt Wagner
+                      by {post.author}
                     </Typography>
                     <Typography
                       use="body1"

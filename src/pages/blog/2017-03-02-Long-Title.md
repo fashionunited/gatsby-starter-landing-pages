@@ -1,5 +1,6 @@
 ---
 title: "Long Title Style is much more interesting than fashion, really"
+author: Donald Duck
 template: post
 cover: "https://unsplash.it/1152/300/?random?SuperLong"
 category: "random"

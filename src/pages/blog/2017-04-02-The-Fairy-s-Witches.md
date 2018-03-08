@@ -1,5 +1,6 @@
 ---
 title: "The Fairy's Witches"
+author: Donald Duck
 template: post
 cover: "https://unsplash.it/1152/300/?random?FaityWitch"
 category: "something"
@@ -43,11 +44,11 @@ Nusquam sagitta ad ferre, ore terras mihi sopor mundi; tanti terga abstulit; tum
 terreris **adhuc sinistro** ad. Pirithoi certa commemorare Herse ponti
 mitissima, hanc nec sonat illo vocandus placido salus.
 
-1. Clamant donec
-2. Posuitque et relicto parent
-3. Mediis est Siculo eveniet de dictis
-4. Ripae formaque devexaque pecudes domum vidistis proles
-5. Dumque moenia amnes coniugium dumque in saxa
+1.  Clamant donec
+2.  Posuitque et relicto parent
+3.  Mediis est Siculo eveniet de dictis
+4.  Ripae formaque devexaque pecudes domum vidistis proles
+5.  Dumque moenia amnes coniugium dumque in saxa
 
 Si patres terram! Mille habenas tractataque forte. Tenebris viscera gelidos
 fuit? Hamos deinde longique quisquis pugnat moriens, nec Tmolo **ferebat**.

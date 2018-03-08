@@ -1,5 +1,6 @@
 ---
 title: "The Butterfly of the Edge"
+author: Donald Duck
 template: post
 cover: "https://unsplash.it/1152/300/?random?TheButterflyoftheEdge"
 category: "tech"
@@ -35,10 +36,10 @@ quis](http://www.ipse-in.org/meritosenis.html) ardescunt cervicis. Quamvis mens,
 pastae, vimine, quid urbesque vidi, quae fuit strictis radere grandaevique
 odiumque dixit; confiteorque.
 
-1. Dryades resupinum
-2. Lassus vota illos et visis liceret
-3. Per nec tenaci solitoque peto Neoptolemum vitamque
-4. Dianae minoris tum
+1.  Dryades resupinum
+2.  Lassus vota illos et visis liceret
+3.  Per nec tenaci solitoque peto Neoptolemum vitamque
+4.  Dianae minoris tum
 
 ## Ferentem natam simillimus et erat commota pacifer
 

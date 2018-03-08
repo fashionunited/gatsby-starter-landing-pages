@@ -1,5 +1,6 @@
 ---
 title: "Birch in the Roses"
+author: Donald Duck
 template: post
 cover: "https://unsplash.it/1152/300/?random?BirchintheRoses"
 date: "01/03/2017"
@@ -17,9 +18,9 @@ huic, non bis, summa retemptat. Praedelassat tollitur parte capiebant lustratum
 hominem loco coniuge quota, nec aura. Cum constiterat, animos sic videre dumque
 altus **de vesper** membra blanditiis aethera orgia.
 
-1. Sicyonius color
-2. Publica animalia suoque sub
-3. Stupet eiusdem paventem meum
+1.  Sicyonius color
+2.  Publica animalia suoque sub
+3.  Stupet eiusdem paventem meum
 
 ## Supersunt Prothoenora arida moturaque fuerit demissaque aut
 
@@ -39,12 +40,12 @@ essem! Turbatque aequora remanet accepit in digitos, refert reus sanguine.
 Haec dedisset pendens quem exul medios nec fecundus unde, concursibus. Iste in
 superat, omnem cognovit nulla inpendere in silvae certatim.
 
-1. Nimium contigerat fera incipit Lichan nata
-2. Prothoenora rapti contendisse comae
-3. Colloque mitisque
-4. Utinam rogum adeunda dic ausus magnus canam
-5. In plura dubitat
-6. Vivit doceri et rexerit atque
+1.  Nimium contigerat fera incipit Lichan nata
+2.  Prothoenora rapti contendisse comae
+3.  Colloque mitisque
+4.  Utinam rogum adeunda dic ausus magnus canam
+5.  In plura dubitat
+6.  Vivit doceri et rexerit atque
 
 ## Venisse qui fortis nimis horruit ignarus quaeque
 
