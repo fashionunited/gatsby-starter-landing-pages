@@ -45,6 +45,7 @@ export default class PageTemplate extends React.Component {
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
           <h1>{post.title}</h1>
+          This is the page template
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <Meta>
             <PostTags tags={post.tags} />
