@@ -64,6 +64,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                   frontmatter {
                     tags
                     category
+                    template
                   }
                   fields {
                     slug
@@ -103,7 +104,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               component: path.resolve(
                 edge.node.frontmatter.template
                   ? `./src/templates/${edge.node.frontmatter.template}.jsx`
-                  : "./src/templates/post.jsx"
+                  : "./src/templates/page.jsx"
               ),
               context: {
                 slug: edge.node.fields.slug
