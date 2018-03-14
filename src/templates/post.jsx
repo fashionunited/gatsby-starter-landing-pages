@@ -127,6 +127,7 @@ export default class PostTemplate extends React.Component {
                     />
                   )}
                 </ProgressiveImage>
+                <Typography use="caption">Images need a caption</Typography>
               </StyledFigure>
             </AspectRatioPlaceholder>
           </OutsetColumn>

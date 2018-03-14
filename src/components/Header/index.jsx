@@ -2,23 +2,31 @@ import React from "react";
 import Link from "gatsby-link";
 import styled, { css } from "react-emotion";
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: white;
-`;
+import {
+  Toolbar,
+  ToolbarRow,
+  ToolbarSection,
+  ToolbarTitle,
+  ToolbarFixedAdjust
+} from "rmwc/Toolbar";
 
-const Wrapper = styled.section`
-  padding: 1em;
-  background: #666;
+const StyledToolbar = styled(Toolbar)`
+  background-color: #fff;
+  color: #000;
 `;
 
 const Header = () => (
-  <Wrapper>
-    <Title>
-      <a href="/">Header / Toolbar</a>
-    </Title>
-  </Wrapper>
+  // <Toolbar theme="primary-light-bg text-primary-on-secondary">
+  <div>
+    <StyledToolbar fixed theme="background text-primary-on-background">
+      <ToolbarRow>
+        <ToolbarTitle tag="a" href="/">
+          Toolbar
+        </ToolbarTitle>
+      </ToolbarRow>
+    </StyledToolbar>
+    <ToolbarFixedAdjust />
+  </div>
 );
 
 export default Header;
