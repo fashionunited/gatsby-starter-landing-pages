@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import Link from "gatsby-link";
 import styled, { css } from "react-emotion";
 
@@ -6,7 +6,9 @@ import {
   Toolbar,
   ToolbarRow,
   ToolbarSection,
+  ToolbarMenuIcon,
   ToolbarTitle,
+  ToolbarIcon,
   ToolbarFixedAdjust
 } from "rmwc/Toolbar";
 
@@ -14,19 +16,20 @@ const StyledToolbar = styled(Toolbar)`
   background-color: #fff;
   color: #000;
 `;
-
-const Header = () => (
-  // <Toolbar theme="primary-light-bg text-primary-on-secondary">
-  <div>
-    <StyledToolbar fixed theme="background text-primary-on-background">
-      <ToolbarRow>
-        <ToolbarTitle tag="a" href="/">
-          Toolbar
-        </ToolbarTitle>
-      </ToolbarRow>
-    </StyledToolbar>
-    <ToolbarFixedAdjust />
-  </div>
-);
-
-export default Header;
+export default class Navbar extends Component {
+  render() {
+    return (
+      <Toolbar>
+        <ToolbarRow>
+          <ToolbarSection alignStart>
+            <ToolbarMenuIcon use="menu" onClick={this.props.toggle} />
+            <ToolbarTitle>RMWC Test Code</ToolbarTitle>
+          </ToolbarSection>
+          <ToolbarSection alignEnd>
+            <ToolbarIcon use="account_circle" onClick={this.props.login} />
+          </ToolbarSection>
+        </ToolbarRow>
+      </Toolbar>
+    );
+  }
+}

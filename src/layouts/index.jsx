@@ -2,8 +2,9 @@ import React from "react";
 import styled, { injectGlobal } from "react-emotion";
 import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
+import DrawerNav from "../components/DrawerNav";
 import Header from "../components/Header";
-import Footer from "../components/Footer/Footer";
+import Footer from "../components/Footer";
 import colors from "../utils/colors";
 
 /* eslint-disable */
@@ -38,6 +39,15 @@ injectGlobal`
 /* eslint-enable */
 
 export default class MainLayout extends React.Component {
+  state = { drawer: false, login: false };
+
+  drawerToggle = () => {
+    this.setState({ ...this.state, drawer: !this.state.drawer });
+  };
+  loginToggle = () => {
+    this.setState({ ...this.state, login: !this.state.login });
+  };
+
   getLocalTitle() {
     function capitalize(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
@@ -80,7 +90,10 @@ export default class MainLayout extends React.Component {
           <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
-        <Header />
+        <Header toggle={this.drawerToggle} login={this.loginToggle} />
+        {/* <Login opened={this.state.login} toggle={this.loginToggle} /> */}
+        <DrawerNav opened={this.state.drawer} />
+
         {children()}
         <Footer />
       </div>
