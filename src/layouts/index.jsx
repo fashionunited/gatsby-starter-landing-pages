@@ -3,7 +3,10 @@ import styled, { injectGlobal } from "react-emotion";
 import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
 import DrawerNav from "../components/DrawerNav";
+import Login from "../components/Login";
+
 import Header from "../components/Header";
+
 import Footer from "../components/Footer";
 import colors from "../utils/colors";
 
@@ -91,7 +94,7 @@ export default class MainLayout extends React.Component {
           <meta name="description" content={config.siteDescription} />
         </Helmet>
         <Header toggle={this.drawerToggle} login={this.loginToggle} />
-        {/* <Login opened={this.state.login} toggle={this.loginToggle} /> */}
+        <Login opened={this.state.login} toggle={this.loginToggle} />
         <DrawerNav opened={this.state.drawer} />
 
         {children()}
