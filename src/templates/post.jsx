@@ -65,9 +65,9 @@ export const CenteredTypography = styled(Typography)`
 `;
 
 export const StyledArticle = styled.article`
-  font-size: 1.125rem;
+  /* font-size: 1.125rem;
   line-height: 1.82813rem;
-  margin-bottom: 1.82813rem;
+  margin-bottom: 1.82813rem; */
 `;
 
 export const AspectRatioPlaceholder = styled.div`
