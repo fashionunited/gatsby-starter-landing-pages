@@ -3,27 +3,21 @@ import Link from "gatsby-link";
 import UserLinks from "../UserLinks/UserLinks";
 import config from "../../../data/SiteConfig";
 import styled, { css } from "react-emotion";
-// @media (max-width: 640px - 1px) {
-//   .notice-container {
-//       justify-content: space-around;
-//   }
-// }
+
+import { Typography } from "rmwc/Typography";
 
 const StyledFooter = styled.footer`
   justify-content: center;
   align-content: center;
-  /* padding: 10px 5px 5px; */
-  color: white;
 `;
 
-const NoticeContainerH1 = styled.h1`
-  color: white;
-`;
-
-const NoticeContainerH4 = styled.h4`
+const StyledTypograhy = styled(Typography)`
   text-align: center;
   margin: 0;
-  color: white;
+  color: var(
+    --mdc-theme-text-secondary-on-background,
+    rgba(0, 0, 0, 0.54)
+  ) !important;
 `;
 
 const NoticeContainer = styled.div`
@@ -35,9 +29,18 @@ const NoticeContainer = styled.div`
   margin-top: 25px;
 `;
 
+const WrapperUserLinks = styled.section`
+  padding: 2em;
+`;
+
 const Wrapper = styled.section`
   padding: 4em;
-  /* background: #666; */
+`;
+
+const WrapperCenter = styled.section`
+  text-align: center;
+  margin: 0;
+  line-height: 0rem;
 `;
 
 const ulStyle = css`
@@ -47,7 +50,7 @@ const ulStyle = css`
   text-transform: uppercase;
   padding: 0;
   & a {
-    cursor: pointer;
+    color: var(--mdc-theme-primary, #6200ee);
     opacity: 0.5;
     transition: opacity 0.15s ease-in;
     transition: color 0.15s ease-in;
@@ -72,26 +75,34 @@ class Footer extends Component {
     }
     return (
       <StyledFooter>
-        <UserLinks config={config} labeled />
+        <WrapperUserLinks>
+          <UserLinks config={config} labeled />
+        </WrapperUserLinks>
         <Wrapper>
-          <div className="notice-container">
-            <NoticeContainerH1>Footer</NoticeContainerH1>
-            <ul className={ulStyle}>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/privacy-policy">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link to="/terms-of-service">Terms of Service</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-            </ul>
-            <NoticeContainerH4>{copyright}</NoticeContainerH4>
-            <NoticeContainerH4>
+          <ul className={ulStyle}>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/privacy-policy">Privacy Policy</Link>
+            </li>
+            <li>
+              <Link to="/terms-of-service">Terms of Service</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
+
+          <WrapperCenter>
+            <StyledTypograhy
+              tag="h4"
+              use="subheading1"
+              // theme="text-secondary-on-background" // As of now this only works with RMWC components directly, not when they are passed throug styled components / Emotion
+            >
+              {copyright}
+            </StyledTypograhy>
+            <StyledTypograhy tag="h4" use="subheading1">
               Based on{" "}
               <a href="https://github.com/Vagr9K/gatsby-advanced-starter">
                 Gatsby Advanced Starter
@@ -100,8 +111,8 @@ class Footer extends Component {
               <a href="https://github.com/saschajullmann/gatsby-starter-gatsbythemes">
                 Gatsby Starter Gatsbythemes
               </a>.
-            </NoticeContainerH4>
-          </div>
+            </StyledTypograhy>
+          </WrapperCenter>
         </Wrapper>
       </StyledFooter>
     );
