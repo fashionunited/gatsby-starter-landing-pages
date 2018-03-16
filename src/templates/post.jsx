@@ -115,15 +115,14 @@ export default class PostTemplate extends React.Component {
                     <img
                       alt={post.title}
                       src={src}
-                      style={
-                        {
-                          // backgroundImage: `url(${src})`,
-                          // backgroundSize: 'cover',
-                          // height: '1186px',
-                          // height: '36rem', // so far it looks the placeholder needs height to load properly sized
-                          // height: '24.626rem',
-                        }
-                      }
+                      style={{
+                        maxWidth: "100%"
+                        // backgroundImage: `url(${src})`,
+                        // backgroundSize: 'cover',
+                        // height: '1186px',
+                        // height: '36rem', // so far it looks the placeholder needs height to load properly sized
+                        // height: '24.626rem',
+                      }}
                     />
                   )}
                 </ProgressiveImage>

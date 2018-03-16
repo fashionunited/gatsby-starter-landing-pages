@@ -23,7 +23,9 @@ export default class Navbar extends Component {
         <ToolbarRow>
           <ToolbarSection alignStart>
             <ToolbarMenuIcon use="menu" onClick={this.props.toggle} />
-            <ToolbarTitle>RMWC Test Code</ToolbarTitle>
+            <ToolbarTitle tag="a" href="/">
+              Toolbar
+            </ToolbarTitle>
           </ToolbarSection>
           <ToolbarSection alignEnd>
             <ToolbarIcon use="account_circle" onClick={this.props.login} />
