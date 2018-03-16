@@ -13,8 +13,12 @@ class Index extends React.Component {
       <div className="index-container">
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} />
-        <Grid>
-          <PostListing postEdges={postEdges} />
+        <Grid tag="section">
+          <GridCell span="3" />
+          <GridCell span="6">
+            <PostListing postEdges={postEdges} />
+          </GridCell>
+          <GridCell span="3" />
         </Grid>
       </div>
     );

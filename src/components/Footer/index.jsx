@@ -37,7 +37,7 @@ const NoticeContainer = styled.div`
 
 const Wrapper = styled.section`
   padding: 4em;
-  background: #666;
+  /* background: #666; */
 `;
 
 const ulStyle = css`

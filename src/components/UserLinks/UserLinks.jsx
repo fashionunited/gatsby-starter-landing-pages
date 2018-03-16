@@ -26,7 +26,7 @@ class UserLinks extends Component {
     if (!userLinks) {
       return null;
     }
-    return <StyledDiv>{this.getLinkElements()}</StyledDiv>;
+    return <StyledDiv>{this.getLinkElements()}ö</StyledDiv>;
   }
 }
 

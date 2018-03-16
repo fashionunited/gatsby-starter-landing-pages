@@ -35,7 +35,7 @@ export default ({ data }) => {
         </GridCell>
         <GridCell span="3" />
       </Grid>
-      <Grid tag="section" maxwidth="900px">
+      <Grid tag="section">
         <GridCell span="3" />
         <GridCell span="6">
           <h1>This could be another section</h1>

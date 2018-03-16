@@ -13,7 +13,7 @@ import {
 
 import { Typography } from "rmwc/Typography";
 
-import { GridCell } from "rmwc/Grid";
+import { Grid, GridCell } from "rmwc/Grid";
 import { Elevation } from "rmwc/Elevation";
 import styled from "react-emotion";
 
@@ -37,19 +37,19 @@ class PostListing extends React.Component {
   render() {
     const postList = this.getPostList();
     return (
-      <div>
+      <Grid>
         {/* Your post list here. */
         postList.map(post => (
           <GridCell span="4" key={post.title}>
-            <Link to={post.path}>
-              {/* <Card style={{ width: "21rem" }}> */}
-              <Card style={{ width: "21rem" }}>
+            {/* <Card style={{ width: "21rem" }}> */}
+            {/* <Card style={{ width: "21rem", margin: "3rem" }}> */}
+            <Card>
+              <Link to={post.path}>
                 <CardPrimaryAction>
                   <CardMedia
                     sixteenByNine
                     style={{
-                      backgroundImage:
-                        "url(https://material-components-web.appspot.com/images/16-9.jpg)"
+                      backgroundImage: `url(${post.cover})`
                     }}
                   />
                   <div style={{ padding: "0 1rem 1rem 1rem" }}>
@@ -74,32 +74,32 @@ class PostListing extends React.Component {
                     </Typography>
                   </div>
                 </CardPrimaryAction>
-                <CardActions>
-                  <CardActionButtons>
-                    <CardAction>Read</CardAction>
-                    <CardAction>Bookmark</CardAction>
-                  </CardActionButtons>
-                  <CardActionIcons>
-                    <CardAction
-                      iconToggle
-                      on={{
-                        label: "Remove from favorites",
-                        content: "favorite"
-                      }}
-                      off={{
-                        label: "Add to favorites",
-                        content: "favorite_border"
-                      }}
-                    />
-                    <CardAction icon use="share" />
-                    <CardAction icon use="more_vert" />
-                  </CardActionIcons>
-                </CardActions>
-              </Card>
-            </Link>
+              </Link>
+              <CardActions>
+                <CardActionButtons>
+                  <CardAction>Read</CardAction>
+                  {/* <CardAction>Bookmark</CardAction> */}
+                </CardActionButtons>
+                <CardActionIcons>
+                  <CardAction
+                    iconToggle
+                    on={{
+                      label: "Remove from favorites",
+                      content: "favorite"
+                    }}
+                    off={{
+                      label: "Add to favorites",
+                      content: "favorite_border"
+                    }}
+                  />
+                  <CardAction icon use="share" />
+                  {/* <CardAction icon use="more_vert" /> */}
+                </CardActionIcons>
+              </CardActions>
+            </Card>
           </GridCell>
         ))}
-      </div>
+      </Grid>
     );
   }
 }
