@@ -2,7 +2,7 @@
 title: "The Butterfly of the Edge"
 author: Donald Duck
 template: post
-cover: "https://unsplash.it/1152/300/?random?TheButterflyoftheEdge"
+cover: "./rocks.jpg"
 category: "tech"
 date: "17/03/2017"
 tags:
@@ -13,6 +13,8 @@ tags:
     - stuff
     - other
 ---
+
+cover: "https://unsplash.it/1152/300/?random?TheButterflyoftheEdge"
 
 # Hanc indeploratum seram Amphitryoniadae tremulis pauperque manum
 
