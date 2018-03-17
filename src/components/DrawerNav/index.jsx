@@ -3,6 +3,8 @@ import { Drawer, DrawerHeader, DrawerContent } from "rmwc/Drawer";
 
 import { ListItem, ListItemText } from "rmwc/List";
 
+import Link from "gatsby-link";
+
 export default class DrawerFU extends Component {
   render() {
     return (
@@ -11,15 +13,21 @@ export default class DrawerFU extends Component {
           DrawerHeader
         </DrawerHeader>
         <DrawerContent>
-          <ListItem>
-            <ListItemText>Cookies</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemText>Pizza</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemText>Icecream</ListItemText>
-          </ListItem>
+          <Link to="/">
+            <ListItem>
+              <ListItemText>Home</ListItemText>
+            </ListItem>
+          </Link>
+          <Link to="/blog">
+            <ListItem>
+              <ListItemText>Blog</ListItemText>
+            </ListItem>
+          </Link>
+          <Link to="/about">
+            <ListItem>
+              <ListItemText>About</ListItemText>
+            </ListItem>
+          </Link>
         </DrawerContent>
       </Drawer>
     );
