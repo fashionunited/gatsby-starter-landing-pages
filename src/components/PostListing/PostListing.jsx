@@ -24,8 +24,8 @@ class PostListing extends React.Component {
       postList.push({
         path: postEdge.node.fields.slug,
         tags: postEdge.node.frontmatter.tags,
-        // cover: postEdge.node.frontmatter.cover,
-        cover: postEdge.node.frontmatter.cover.childImageSharp.sizes,
+        cover: postEdge.node.frontmatter.cover,
+        // cover: postEdge.node.frontmatter.cover.childImageSharp.sizes,
         title: postEdge.node.frontmatter.title,
         date: postEdge.node.frontmatter.date,
         excerpt: postEdge.node.excerpt,
@@ -47,7 +47,7 @@ class PostListing extends React.Component {
             <Card>
               <Link to={post.path}>
                 <CardPrimaryAction>
-                  <Img sizes={post.cover} />
+                  {/* <Img sizes={post.cover} /> */}
                   <CardMedia
                     sixteenByNine
                     style={{
