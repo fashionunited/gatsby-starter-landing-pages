@@ -14,6 +14,7 @@ import { Grid, GridCell } from "rmwc/Grid";
 import CardMedia from "rmwc/Card";
 
 import ProgressiveImage from "react-progressive-image";
+import Img from "gatsby-image";
 
 const Meta = styled.div`
   display: flex;
@@ -86,6 +87,7 @@ export default class PostTemplate extends React.Component {
     const { slug } = this.props.pathContext;
     const postNode = this.props.data.markdownRemark;
     const post = postNode.frontmatter;
+    const plaatje = postNode.frontmatter.cover.childImageSharp.sizes;
     if (!post.id) {
       post.id = slug;
     }
@@ -105,7 +107,8 @@ export default class PostTemplate extends React.Component {
             </CenteredTypography>
           </InsetColumn>
           <OutsetColumn>
-            <AspectRatioPlaceholder>
+            <Img sizes={plaatje} />
+            {/* <AspectRatioPlaceholder>
               <StyledFigure>
                 <ProgressiveImage
                   src={`${post.cover}`}
@@ -128,7 +131,7 @@ export default class PostTemplate extends React.Component {
                 </ProgressiveImage>
                 <Typography use="caption">Images need a caption</Typography>
               </StyledFigure>
-            </AspectRatioPlaceholder>
+            </AspectRatioPlaceholder> */}
           </OutsetColumn>
           <InsetColumn>
             <PostInner>
@@ -163,7 +166,7 @@ export const pageQuery = graphql`
         title
         cover {
           childImageSharp {
-            sizes(maxWidth: 600) {
+            sizes(maxWidth: 200) {
               ...GatsbyImageSharpSizes_withWebp
             }
           }
