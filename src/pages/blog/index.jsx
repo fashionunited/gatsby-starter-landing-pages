@@ -46,7 +46,13 @@ export const pageQuery = graphql`
               id
             }
             tags
-            cover
+            cover {
+              childImageSharp {
+                sizes(maxWidth: 600) {
+                  ...GatsbyImageSharpSizes_withWebp
+                }
+              }
+            }
             date
           }
         }

@@ -161,7 +161,13 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         title
-        cover
+        cover {
+          childImageSharp {
+            sizes(maxWidth: 600) {
+              ...GatsbyImageSharpSizes_withWebp
+            }
+          }
+        }
         date
         category
         tags

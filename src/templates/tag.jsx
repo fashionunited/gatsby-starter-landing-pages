@@ -35,7 +35,13 @@ export const pageQuery = graphql`
           frontmatter {
             title
             tags
-            cover
+            cover {
+              childImageSharp {
+                sizes(maxWidth: 600) {
+                  ...GatsbyImageSharpSizes_withWebp
+                }
+              }
+            }
             date
           }
         }
