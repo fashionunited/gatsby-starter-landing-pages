@@ -49,13 +49,18 @@ class PostListing extends React.Component {
             <Card>
               <Link to={post.path}>
                 <CardPrimaryAction>
-                  <Img sizes={post.cover} />
-                  {/* <CardMedia
-                    sixteenByNine
-                    style={{
-                      backgroundImage: `url(${post.cover})`
-                    }}
-                  /> */}
+                  <CardMedia sixteenByNine>
+                    <Img
+                      sizes={post.cover}
+                      style={{
+                        position: "absolute",
+                        left: 0,
+                        top: 0,
+                        width: "100%",
+                        height: "100%"
+                      }}
+                    />
+                  </CardMedia>
                   <div style={{ padding: "0 1rem 1rem 1rem" }}>
                     <Typography use="title" tag="h2">
                       {post.title}
