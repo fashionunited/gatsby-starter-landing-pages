@@ -17,6 +17,8 @@ import { Grid, GridCell } from "rmwc/Grid";
 import { Elevation } from "rmwc/Elevation";
 import styled from "react-emotion";
 
+import Img from "gatsby-image";
+
 class PostListing extends React.Component {
   getPostList() {
     const postList = [];
@@ -24,8 +26,8 @@ class PostListing extends React.Component {
       postList.push({
         path: postEdge.node.fields.slug,
         tags: postEdge.node.frontmatter.tags,
-        cover: postEdge.node.frontmatter.cover,
-        // cover: postEdge.node.frontmatter.cover.childImageSharp.sizes,
+        // cover: postEdge.node.frontmatter.cover,
+        cover: postEdge.node.frontmatter.cover.childImageSharp.sizes,
         title: postEdge.node.frontmatter.title,
         date: postEdge.node.frontmatter.date,
         excerpt: postEdge.node.excerpt,
@@ -47,13 +49,13 @@ class PostListing extends React.Component {
             <Card>
               <Link to={post.path}>
                 <CardPrimaryAction>
-                  {/* <Img sizes={post.cover} /> */}
-                  <CardMedia
+                  <Img sizes={post.cover} />
+                  {/* <CardMedia
                     sixteenByNine
                     style={{
                       backgroundImage: `url(${post.cover})`
                     }}
-                  />
+                  /> */}
                   <div style={{ padding: "0 1rem 1rem 1rem" }}>
                     <Typography use="title" tag="h2">
                       {post.title}

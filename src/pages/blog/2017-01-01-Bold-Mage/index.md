@@ -1,5 +1,6 @@
 ---
 title: "Bold Mage"
+slug: "bold-mage"
 template: post
 cover: "./rocks.jpg"
 author: Donald Duck
