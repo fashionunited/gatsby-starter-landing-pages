@@ -1,6 +1,6 @@
 ---
 title: "The Butterfly of the Edge"
-author: Donald Duck
+author: Coco Chanel
 template: post
 cover: "./lipstick.jpg"
 category: "tech"

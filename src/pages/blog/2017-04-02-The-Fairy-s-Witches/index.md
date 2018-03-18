@@ -1,6 +1,6 @@
 ---
 title: "The Fairy's Witches"
-author: Donald Duck
+author: Coco Chanel
 template: post
 cover: "./blue.png"
 category: "something"

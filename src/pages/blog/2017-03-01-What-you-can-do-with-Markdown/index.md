@@ -1,6 +1,6 @@
 ---
 title: "What you can do with Markdown"
-author: Donald Duck
+author: Coco Chanel
 template: post
 cover: "./clem-onojeghuo-173078-unsplash.jpg"
 caption: "Clem Onojeghuo, Unsplash"

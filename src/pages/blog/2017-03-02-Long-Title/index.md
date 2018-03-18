@@ -1,6 +1,6 @@
 ---
 title: "Long Title Style is much more interesting than fashion, really"
-author: Donald Duck
+author: Coco Chanel
 template: post
 cover: "./ashim-d-silva-89336-unsplash.jpg"
 caption: "Ashim d Silva, Unsplash"

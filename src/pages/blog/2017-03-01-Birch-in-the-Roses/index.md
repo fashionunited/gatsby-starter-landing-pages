@@ -1,6 +1,6 @@
 ---
 title: "Birch in the Roses"
-author: Donald Duck
+author: Coco Chanel
 template: post
 cover: "./d-ng-tr-n-qu-c-104956-unsplash.jpg"
 caption: "D Ng Tr n qu c, Unsplash"

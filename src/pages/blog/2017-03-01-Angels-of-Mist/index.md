@@ -1,6 +1,6 @@
 ---
 title: "Angels of Mist"
-author: Donald Duck
+author: Coco Chanel
 cover: "./lindsay-henwood-47743-unsplash.jpg"
 caption: "Lindsay Henwood, Unsplash"
 category: "test3"

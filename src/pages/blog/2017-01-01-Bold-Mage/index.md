@@ -3,7 +3,7 @@ title: "Bold Mage"
 slug: "bold-mage"
 template: post
 cover: "./crawler.jpg"
-author: Donald Duck
+author: Coco Chanel
 date: "01/01/2017"
 category: "tech"
 tags:
