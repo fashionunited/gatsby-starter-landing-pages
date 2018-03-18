@@ -2,7 +2,7 @@
 title: "Bold Mage"
 slug: "bold-mage"
 template: post
-cover: "./rocks.jpg"
+cover: "./crawler.jpg"
 author: Donald Duck
 date: "01/01/2017"
 category: "tech"

@@ -2,7 +2,7 @@
 title: "Birch in the Roses"
 author: Donald Duck
 template: post
-cover: "./rocks.jpg"
+cover: "./d-ng-tr-n-qu-c-104956-unsplash.jpg"
 date: "01/03/2017"
 category: "tech"
 tags:

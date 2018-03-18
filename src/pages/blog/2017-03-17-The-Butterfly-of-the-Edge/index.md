@@ -2,7 +2,7 @@
 title: "The Butterfly of the Edge"
 author: Donald Duck
 template: post
-cover: "./rocks.jpg"
+cover: "./lipstick.jpg"
 category: "tech"
 date: "17/03/2017"
 tags:

@@ -107,10 +107,11 @@ export default class PostTemplate extends React.Component {
             </CenteredTypography>
           </InsetColumn>
           <OutsetColumn>
-            <Img sizes={plaatje} />
-            {/* <AspectRatioPlaceholder>
+            <AspectRatioPlaceholder>
               <StyledFigure>
-                <ProgressiveImage
+                <Img sizes={plaatje} />
+
+                {/* <ProgressiveImage
                   src={`${post.cover}`}
                   placeholder="data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABQBQCdASoqABwAP/3+/3+/urWyMBVYA/A/iWIAAR7p/Y3etgh4KD8QqXEZj6waibITSIAA/cndnUz4/z4LEgByYUql75Cq/12W33KFIKQpc8L0Dt19C7NFXin0tKlxd70dzSF978msbuqLjDgAAA=="
                 >
@@ -128,10 +129,10 @@ export default class PostTemplate extends React.Component {
                       }}
                     />
                   )}
-                </ProgressiveImage>
+                </ProgressiveImage> */}
                 <Typography use="caption">Images need a caption</Typography>
               </StyledFigure>
-            </AspectRatioPlaceholder> */}
+            </AspectRatioPlaceholder>
           </OutsetColumn>
           <InsetColumn>
             <PostInner>

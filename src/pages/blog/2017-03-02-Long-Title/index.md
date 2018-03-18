@@ -2,7 +2,7 @@
 title: "Long Title Style is much more interesting than fashion, really"
 author: Donald Duck
 template: post
-cover: "./rocks.jpg"
+cover: "./ashim-d-silva-89336-unsplash.jpg"
 category: "random"
 date: "02/03/2017"
 tags:

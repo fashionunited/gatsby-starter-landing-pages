@@ -1,6 +1,6 @@
 ---
 title: "The Fallen Time"
-cover: "./rocks.jpg"
+cover: "./alexandra-gorn-342847-unsplash.jpg"
 author: Donald Duck
 date: "01/02/2017"
 category: "another one"
