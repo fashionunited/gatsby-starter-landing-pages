@@ -1,7 +1,7 @@
 ---
 title: "Angels of Mist"
 author: Donald Duck
-cover: "https://unsplash.it/400/300/?random?AngelsofMist"
+cover: "./rocks.jpg"
 category: "test3"
 date: "01/03/2017"
 tags:

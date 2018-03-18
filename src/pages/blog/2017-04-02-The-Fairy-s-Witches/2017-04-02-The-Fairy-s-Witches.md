@@ -2,7 +2,7 @@
 title: "The Fairy's Witches"
 author: Donald Duck
 template: post
-cover: "https://unsplash.it/1152/300/?random?FaityWitch"
+cover: "./rocks.jpg"
 category: "something"
 date: "02/04/2017"
 ---

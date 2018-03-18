@@ -2,7 +2,7 @@
 title: "What you can do with Markdown"
 author: Donald Duck
 template: post
-cover: "https://unsplash.it/400/300/?random?BigTest"
+cover: "./rocks.jpg"
 category: "markdown"
 date: "01/03/2018"
 slug: "Big-Sample_Test"
