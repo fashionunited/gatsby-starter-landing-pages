@@ -3,6 +3,7 @@ title: "Long Title Style is much more interesting than fashion, really"
 author: Donald Duck
 template: post
 cover: "./ashim-d-silva-89336-unsplash.jpg"
+caption: "Ashim d Silva, Unsplash"
 category: "random"
 date: "02/03/2017"
 tags:

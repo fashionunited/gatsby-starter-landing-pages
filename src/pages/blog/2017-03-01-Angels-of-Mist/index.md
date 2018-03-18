@@ -2,6 +2,7 @@
 title: "Angels of Mist"
 author: Donald Duck
 cover: "./lindsay-henwood-47743-unsplash.jpg"
+caption: "Lindsay Henwood, Unsplash"
 category: "test3"
 date: "01/03/2017"
 tags:

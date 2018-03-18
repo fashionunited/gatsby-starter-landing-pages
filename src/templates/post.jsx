@@ -130,7 +130,7 @@ export default class PostTemplate extends React.Component {
                     />
                   )}
                 </ProgressiveImage> */}
-                <Typography use="caption">Images need a caption</Typography>
+                <Typography use="caption">{post.caption}</Typography>
               </StyledFigure>
             </AspectRatioPlaceholder>
           </OutsetColumn>
@@ -172,6 +172,7 @@ export const pageQuery = graphql`
             }
           }
         }
+        caption
         date
         category
         tags
