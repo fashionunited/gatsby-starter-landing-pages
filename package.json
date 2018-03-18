@@ -81,6 +81,7 @@
     "build:fire": "node_modules/.bin/gatsby build && firebase deploy",
     "build:material":
       "node_modules/.bin/gatsby build && firebase deploy -P material-components-web",
+    "heroku-postbuild": "gatsby build",
     "clean": "rm -rf public",
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:md": "remark src/pages/",
