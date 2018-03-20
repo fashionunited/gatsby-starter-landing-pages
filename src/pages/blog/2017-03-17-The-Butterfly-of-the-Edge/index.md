@@ -14,8 +14,6 @@ tags:
     - other
 ---
 
-cover: "https://unsplash.it/1152/300/?random?TheButterflyoftheEdge"
-
 # Hanc indeploratum seram Amphitryoniadae tremulis pauperque manum
 
 ## Cognoscenti audeat ulterius sublimia terga potiorque saxo
