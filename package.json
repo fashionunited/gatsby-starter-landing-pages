@@ -72,7 +72,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "develop": "node_modules/.bin/gatsby develop",
+    "develop": "node_modules/.bin/gatsby develop -p $PORT -H $IP",
     "dev": "node_modules/.bin/gatsby develop",
     "build": "node_modules/.bin/gatsby build",
     "serve": "node_modules/.bin/gatsby serve",
