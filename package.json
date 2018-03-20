@@ -68,19 +68,21 @@
     "stylelint-config-standard": "^18.0.0",
     "write-good": "^0.11.3"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "develop": "node_modules/.bin/gatsby develop -p $PORT -H $IP",
+    "develop": "node_modules/.bin/gatsby develop",
+    "develop:aws": "node_modules/.bin/gatsby develop -p $PORT -H $IP",
     "dev": "node_modules/.bin/gatsby develop",
     "build": "node_modules/.bin/gatsby build",
     "serve": "node_modules/.bin/gatsby serve",
     "build:pp": "node_modules/.bin/gatsby build --prefix-paths",
     "build:gh": "npm run build:pp && gh-pages -d public",
     "build:fire": "node_modules/.bin/gatsby build && firebase deploy",
-    "build:material":
-      "node_modules/.bin/gatsby build && firebase deploy -P material-components-web",
+    "build:material": "node_modules/.bin/gatsby build && firebase deploy -P material-components-web",
     "heroku-postbuild": "gatsby build",
     "clean": "rm -rf public",
     "lint:js": "eslint --ext .js,.jsx .",
@@ -89,6 +91,8 @@
     "format:js": "prettier '**/*.{js,jsx}' --write"
   },
   "remarkConfig": {
-    "plugins": ["remark-preset-lint-recommended"]
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
   }
 }
