@@ -1,14 +1,14 @@
-import React from "react";
-import Helmet from "react-helmet";
-import UserInfo from "../components/UserInfo/UserInfo";
-import Disqus from "../components/Disqus/Disqus";
-import PostTags from "../components/PostTags/PostTags";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
-import "./b16-tomorrow-dark.css";
-import styled, { css } from "react-emotion";
-import { DFPSlotsProvider, AdSlot } from "react-dfp";
+import React from 'react';
+import Helmet from 'react-helmet';
+import UserInfo from '../components/UserInfo/UserInfo';
+import Disqus from '../components/Disqus/Disqus';
+import PostTags from '../components/PostTags/PostTags';
+import SocialLinks from '../components/SocialLinks/SocialLinks';
+import SEO from '../components/SEO/SEO';
+import config from '../../data/SiteConfig';
+import './b16-tomorrow-dark.css';
+import styled, { css } from 'react-emotion';
+import { DFPSlotsProvider, AdSlot } from 'react-dfp';
 
 const Meta = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const Meta = styled.div`
   justify-content: center;
 `;
 const Hero = styled.header.attrs({
-  image: props => props.image || "https://unsplash.it/400/300/?random?BoldMage"
+  image: props => props.image || 'https://unsplash.it/400/300/?random?BoldMage',
 })`
   padding: 4em;
   background: papayawhip;
@@ -43,8 +43,8 @@ export default class wideHeaderTemplate extends React.Component {
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
           <DFPSlotsProvider
-            dfpNetworkId={"5347124"}
-            adUnit={"TEST/JobLanding_Top"}
+            dfpNetworkId={'5347124'}
+            adUnit={'TEST/JobLanding_Top'}
           >
             <AdSlot sizes={[[320, 50], [320, 100], [970, 90], [970, 250]]} />
           </DFPSlotsProvider>
@@ -52,14 +52,14 @@ export default class wideHeaderTemplate extends React.Component {
           <h1>{post.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <DFPSlotsProvider
-            dfpNetworkId={"5347124"}
-            adUnit={"TEST/JobLanding_Left"}
+            dfpNetworkId={'5347124'}
+            adUnit={'TEST/JobLanding_Left'}
           >
             <AdSlot sizes={[[300, 600]]} />
           </DFPSlotsProvider>
           <DFPSlotsProvider
-            dfpNetworkId={"5347124"}
-            adUnit={"TEST/JobLanding_Right"}
+            dfpNetworkId={'5347124'}
+            adUnit={'TEST/JobLanding_Right'}
           >
             <AdSlot sizes={[[300, 600]]} />
           </DFPSlotsProvider>
@@ -85,7 +85,13 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         title
-        cover {           childImageSharp {             sizes(maxWidth: 600) {               ...GatsbyImageSharpSizes_withWebp             }           }         }
+        cover {
+          childImageSharp {
+            sizes(maxWidth: 600) {
+              ...GatsbyImageSharpSizes_withWebp
+            }
+          }
+        }
         date
         category
         tags

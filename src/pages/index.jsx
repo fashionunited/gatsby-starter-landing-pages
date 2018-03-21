@@ -1,9 +1,9 @@
 /* eslint-disable no-undef, react/prop-types */
-import React from "react";
-import Link from "gatsby-link";
-import colors from "../utils/colors";
+import React from 'react';
+import Link from 'gatsby-link';
+import colors from '../utils/colors';
 
-import { Grid, GridCell } from "rmwc/Grid";
+import { Grid, GridCell } from 'rmwc/Grid';
 
 export default ({ data }) => {
   const myData = data.allContentJson.edges[0].node.index;
@@ -12,7 +12,7 @@ export default ({ data }) => {
       <Grid tag="section">
         <GridCell span="3" />
         <GridCell span="6">
-          {" "}
+          {' '}
           <div>
             <h1>{myData.title}</h1>
             <h3>{myData.subtitle}</h3>

@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import _ from "lodash";
-import Link from "gatsby-link";
-import styled, { css } from "react-emotion";
-import { Button } from "rmwc/Button";
+import React, { Component } from 'react';
+import _ from 'lodash';
+import Link from 'gatsby-link';
+import styled, { css } from 'react-emotion';
+import { Button } from 'rmwc/Button';
 
 export const StyledLink = styled.li`
   display: inline-block;
@@ -18,7 +18,7 @@ class PostTags extends Component {
           tags.map(tag => (
             <StyledLink
               key={tag}
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: 'none' }}
               to={`/tags/${_.kebabCase(tag)}`}
             >
               <Button unelevated>{tag}</Button>

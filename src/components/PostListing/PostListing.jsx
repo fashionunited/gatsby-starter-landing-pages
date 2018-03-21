@@ -1,5 +1,5 @@
-import React from "react";
-import Link from "gatsby-link";
+import React from 'react';
+import Link from 'gatsby-link';
 
 import {
   Card,
@@ -8,16 +8,16 @@ import {
   CardAction,
   CardActions,
   CardActionButtons,
-  CardActionIcons
-} from "rmwc/Card";
+  CardActionIcons,
+} from 'rmwc/Card';
 
-import { Typography } from "rmwc/Typography";
+import { Typography } from 'rmwc/Typography';
 
-import { Grid, GridCell } from "rmwc/Grid";
-import { Elevation } from "rmwc/Elevation";
-import styled from "react-emotion";
+import { Grid, GridCell } from 'rmwc/Grid';
+import { Elevation } from 'rmwc/Elevation';
+import styled from 'react-emotion';
 
-import Img from "gatsby-image";
+import Img from 'gatsby-image';
 
 class PostListing extends React.Component {
   getPostList() {
@@ -31,7 +31,7 @@ class PostListing extends React.Component {
         title: postEdge.node.frontmatter.title,
         date: postEdge.node.frontmatter.date,
         excerpt: postEdge.node.excerpt,
-        timeToRead: postEdge.node.timeToRead
+        timeToRead: postEdge.node.timeToRead,
         // author: postEdge.node.frontmatter.author.id // <<< Breaks build???
       });
     });
@@ -53,15 +53,15 @@ class PostListing extends React.Component {
                     <Img
                       sizes={post.cover}
                       style={{
-                        position: "absolute",
+                        position: 'absolute',
                         left: 0,
                         top: 0,
-                        width: "100%",
-                        height: "100%"
+                        width: '100%',
+                        height: '100%',
                       }}
                     />
                   </CardMedia>
-                  <div style={{ padding: "0 1rem 1rem 1rem" }}>
+                  <div style={{ padding: '0 1rem 1rem 1rem' }}>
                     <Typography use="title" tag="h2">
                       {post.title}
                     </Typography>
@@ -69,7 +69,7 @@ class PostListing extends React.Component {
                       use="subheading1"
                       tag="h3"
                       theme="text-secondary-on-background"
-                      style={{ marginTop: "-1rem" }}
+                      style={{ marginTop: '-1rem' }}
                     >
                       by {post.author}
                     </Typography>
@@ -93,12 +93,12 @@ class PostListing extends React.Component {
                   <CardAction
                     iconToggle
                     on={{
-                      label: "Remove from favorites",
-                      content: "favorite"
+                      label: 'Remove from favorites',
+                      content: 'favorite',
                     }}
                     off={{
-                      label: "Add to favorites",
-                      content: "favorite_border"
+                      label: 'Add to favorites',
+                      content: 'favorite_border',
                     }}
                   />
                   <CardAction icon use="share" />

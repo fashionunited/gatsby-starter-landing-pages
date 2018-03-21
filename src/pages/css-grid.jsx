@@ -1,7 +1,7 @@
-import React from "react";
-import Img from "gatsby-image";
-import { Grid, GridCell } from "rmwc/Grid";
-import styled, { css } from "react-emotion";
+import React from 'react';
+import Img from 'gatsby-image';
+import { Grid, GridCell } from 'rmwc/Grid';
+import styled, { css } from 'react-emotion';
 
 const gridStyle = css`
   /* Repeat 6 1fr rows named "row" and 6 1fr columns named "col" */

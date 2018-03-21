@@ -1,6 +1,6 @@
-import React from "react";
-import Img from "gatsby-image";
-import { Grid, GridCell } from "rmwc/Grid";
+import React from 'react';
+import Img from 'gatsby-image';
+import { Grid, GridCell } from 'rmwc/Grid';
 
 const BlurUp = ({ data }) => (
   <div>
@@ -13,11 +13,11 @@ const BlurUp = ({ data }) => (
             style={{ display: `inherit` }}
             css={{
               // float: `right`,
-              "&": {
-                "@media (min-width: 500px)": {
-                  display: `none`
-                }
-              }
+              '&': {
+                '@media (min-width: 500px)': {
+                  display: `none`,
+                },
+              },
             }}
             title={`Photo by Redd Angelo on Unsplash`}
             resolutions={data.reddImageMobile.resolutions}
@@ -29,9 +29,9 @@ const BlurUp = ({ data }) => (
             css={{
               // float: `right`,
               display: `none`,
-              "@media (min-width: 500px)": {
-                display: `inline-block`
-              }
+              '@media (min-width: 500px)': {
+                display: `inline-block`,
+              },
             }}
             title={`Photo by Redd Angelo on Unsplash`}
             resolutions={data.reddImage.resolutions}

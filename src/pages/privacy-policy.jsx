@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import Helmet from "react-helmet";
-import About from "../components/About/About";
-import config from "../../data/SiteConfig";
-import { Grid, GridCell } from "rmwc/Grid";
+import React, { Component } from 'react';
+import Helmet from 'react-helmet';
+import About from '../components/About/About';
+import config from '../../data/SiteConfig';
+import { Grid, GridCell } from 'rmwc/Grid';
 class PrivacyPolicy extends Component {
   render() {
     return (

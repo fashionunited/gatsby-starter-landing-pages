@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import Link from "gatsby-link";
-import UserLinks from "../UserLinks/UserLinks";
-import config from "../../../data/SiteConfig";
-import styled, { css } from "react-emotion";
+import React, { Component } from 'react';
+import Link from 'gatsby-link';
+import UserLinks from '../UserLinks/UserLinks';
+import config from '../../../data/SiteConfig';
+import styled, { css } from 'react-emotion';
 
-import { Typography } from "rmwc/Typography";
+import { Typography } from 'rmwc/Typography';
 
 const StyledFooter = styled.footer`
   justify-content: center;
@@ -103,11 +103,11 @@ class Footer extends Component {
               {copyright}
             </StyledTypograhy>
             <StyledTypograhy tag="h4" use="subheading1">
-              Based on{" "}
+              Based on{' '}
               <a href="https://github.com/Vagr9K/gatsby-advanced-starter">
                 Gatsby Advanced Starter
-              </a>{" "}
-              &{" "}
+              </a>{' '}
+              &{' '}
               <a href="https://github.com/saschajullmann/gatsby-starter-gatsbythemes">
                 Gatsby Starter Gatsbythemes
               </a>.

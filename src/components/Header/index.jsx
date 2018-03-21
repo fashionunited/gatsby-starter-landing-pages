@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import Link from "gatsby-link";
-import styled, { css } from "react-emotion";
+import React, { Component } from 'react';
+import Link from 'gatsby-link';
+import styled, { css } from 'react-emotion';
 
 import {
   Toolbar,
@@ -9,10 +9,10 @@ import {
   ToolbarMenuIcon,
   ToolbarTitle,
   ToolbarIcon,
-  ToolbarFixedAdjust
-} from "rmwc/Toolbar";
+  ToolbarFixedAdjust,
+} from 'rmwc/Toolbar';
 
-import { Theme } from "rmwc/Theme";
+import { Theme } from 'rmwc/Theme';
 
 const StyledToolbar = styled(Toolbar)`
   background-color: #fff;
