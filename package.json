@@ -87,7 +87,8 @@
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:md": "remark src/pages/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
-    "format:js": "prettier '**/*.{js,jsx}' --write"
+    "format:js": "prettier '**/*.{js,jsx}' --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "remarkConfig": {
     "plugins": ["remark-preset-lint-recommended"]
