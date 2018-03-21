@@ -1,13 +1,15 @@
-import React from "react";
-import Helmet from "react-helmet";
-import UserInfo from "../components/UserInfo/UserInfo";
-import Disqus from "../components/Disqus/Disqus";
-import PostTags from "../components/PostTags/PostTags";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
-import "./b16-tomorrow-dark.css";
-import styled, { css } from "react-emotion";
+import React from 'react';
+import Helmet from 'react-helmet';
+import UserInfo from '../components/UserInfo/UserInfo';
+import Disqus from '../components/Disqus/Disqus';
+import PostTags from '../components/PostTags/PostTags';
+import SocialLinks from '../components/SocialLinks/SocialLinks';
+import SEO from '../components/SEO/SEO';
+import config from '../../data/SiteConfig';
+import './b16-tomorrow-dark.css';
+import styled, { css } from 'react-emotion';
+
+import { Grid, GridCell } from 'rmwc/Grid';
 
 const Title = styled.h1`
   font-size: 1.5em;
@@ -43,16 +45,23 @@ export default class PageTemplate extends React.Component {
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
-        <div>
-          <h1>{post.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          <Meta>
-            <PostTags tags={post.tags} />
-            <SocialLinks postPath={slug} postNode={postNode} />
-          </Meta>
-          <UserInfo config={config} />
-          <Disqus postNode={postNode} />
-        </div>
+        <Grid tag="section">
+          <GridCell span="3" />
+          <GridCell span="6">
+            <div>
+              <h1>{post.title}</h1>
+              This is the page template
+              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+              <Meta>
+                <PostTags tags={post.tags} />
+                <SocialLinks postPath={slug} postNode={postNode} />
+              </Meta>
+              <UserInfo config={config} />
+              <Disqus postNode={postNode} />
+            </div>
+          </GridCell>
+          <GridCell span="3" />
+        </Grid>
       </div>
     );
   }
@@ -67,7 +76,13 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         title
-        cover
+        cover {
+          childImageSharp {
+            sizes(maxWidth: 600) {
+              ...GatsbyImageSharpSizes_withWebp
+            }
+          }
+        }
         date
         category
         tags

@@ -19,6 +19,7 @@
     "gatsby-plugin-nprogress": "^1.0.9",
     "gatsby-plugin-offline": "^1.0.12",
     "gatsby-plugin-react-helmet": "^2.0.3",
+    "gatsby-plugin-sass": "^1.0.18",
     "gatsby-plugin-sharp": "^1.6.24",
     "gatsby-plugin-sitemap": "^1.2.9",
     "gatsby-plugin-twitter": "^1.0.14",
@@ -34,6 +35,7 @@
     "gatsby-transformer-yaml": "^1.5.15",
     "lodash": "^4.17.4",
     "lodash-webpack-plugin": "^0.11.4",
+    "material-design-icons": "^3.0.1",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.1",
     "react": "^15.6.1",
@@ -41,8 +43,11 @@
     "react-dom": "^15.6.1",
     "react-emotion": "^9.0.2",
     "react-helmet": "^5.2.0",
+    "react-progressive-image": "^0.3.0",
     "react-share": "^2.0.0",
-    "react-twitter-widgets": "^1.7.1"
+    "react-twitter-widgets": "^1.7.1",
+    "rmwc": "1.3.0",
+    "typeface-roboto": "^0.0.54"
   },
   "devDependencies": {
     "cli-glob": "^0.1.0",
@@ -68,17 +73,23 @@
   "main": "n/a",
   "scripts": {
     "develop": "node_modules/.bin/gatsby develop",
+    "develop:aws": "node_modules/.bin/gatsby develop -p $PORT -H $IP",
     "dev": "node_modules/.bin/gatsby develop",
     "build": "node_modules/.bin/gatsby build",
     "serve": "node_modules/.bin/gatsby serve",
     "build:pp": "node_modules/.bin/gatsby build --prefix-paths",
     "build:gh": "npm run build:pp && gh-pages -d public",
     "build:fire": "node_modules/.bin/gatsby build && firebase deploy",
+    "build:material":
+      "node_modules/.bin/gatsby build && firebase deploy -P material-components-web",
+    "heroku-postbuild": "gatsby build",
     "clean": "rm -rf public",
-    "lint:js": "eslint --ext .js,.jsx .",
+    "lint": "eslint --ext .js,.jsx .",
+    "lint-fix": "eslint --ext .js,.jsx --fix .",
     "lint:md": "remark src/pages/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
-    "format:js": "prettier '**/*.{js,jsx}' --write"
+    "format": "prettier 'src/**/*.{js,jsx}' --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "remarkConfig": {
     "plugins": ["remark-preset-lint-recommended"]

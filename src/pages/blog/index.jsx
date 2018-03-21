@@ -1,8 +1,9 @@
-import React from "react";
-import Helmet from "react-helmet";
-import PostListing from "../../components/PostListing/PostListing";
-import SEO from "../../components/SEO/SEO";
-import config from "../../../data/SiteConfig";
+import React from 'react';
+import Helmet from 'react-helmet';
+import PostListing from '../../components/PostListing/PostListing';
+import SEO from '../../components/SEO/SEO';
+import config from '../../../data/SiteConfig';
+import { Grid, GridCell } from 'rmwc/Grid';
 
 class Index extends React.Component {
   render() {
@@ -11,7 +12,13 @@ class Index extends React.Component {
       <div className="index-container">
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} />
-        <PostListing postEdges={postEdges} />
+        <Grid tag="section">
+          <GridCell span="3" />
+          <GridCell span="6">
+            <PostListing postEdges={postEdges} />
+          </GridCell>
+          <GridCell span="3" />
+        </Grid>
       </div>
     );
   }
@@ -35,8 +42,17 @@ export const pageQuery = graphql`
           timeToRead
           frontmatter {
             title
+            author {
+              id
+            }
             tags
-            cover
+            cover {
+              childImageSharp {
+                sizes(maxWidth: 380) {
+                  ...GatsbyImageSharpSizes_withWebp
+                }
+              }
+            }
             date
           }
         }

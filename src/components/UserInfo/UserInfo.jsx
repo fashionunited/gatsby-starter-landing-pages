@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Follow } from "react-twitter-widgets";
+import React, { Component } from 'react';
+import { Follow } from 'react-twitter-widgets';
 
 class UserInfo extends Component {
   render() {
@@ -8,7 +8,7 @@ class UserInfo extends Component {
     return (
       <Follow
         username={userTwitter}
-        options={{ count: expanded ? true : "none" }}
+        options={{ count: expanded ? true : 'none' }}
       />
     );
   }

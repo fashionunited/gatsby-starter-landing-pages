@@ -20,6 +20,7 @@ module.exports = {
     "MarkdownRemark.frontmatter.author": "AuthorsYaml"
   },
   plugins: [
+    `gatsby-plugin-sass`, // Workaround for RMWC CSS errors in postcss
     "gatsby-plugin-emotion",
     {
       resolve: `gatsby-plugin-google-tagmanager`,
@@ -163,7 +164,6 @@ module.exports = {
                     fields { slug }
                     frontmatter {
                       title
-                      cover
                       date
                       category
                       tags

@@ -1,6 +1,13 @@
-import React, { Component } from "react";
-import _ from "lodash";
-import Link from "gatsby-link";
+import React, { Component } from 'react';
+import _ from 'lodash';
+import Link from 'gatsby-link';
+import styled, { css } from 'react-emotion';
+import { Button } from 'rmwc/Button';
+
+export const StyledLink = styled.li`
+  display: inline-block;
+  margin: 10px 5px;
+`;
 
 class PostTags extends Component {
   render() {
@@ -9,13 +16,13 @@ class PostTags extends Component {
       <div className="post-tag-container">
         {tags &&
           tags.map(tag => (
-            <Link
+            <StyledLink
               key={tag}
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: 'none' }}
               to={`/tags/${_.kebabCase(tag)}`}
             >
-              <button>{tag}</button>
-            </Link>
+              <Button unelevated>{tag}</Button>
+            </StyledLink>
           ))}
       </div>
     );

@@ -1,5 +1,7 @@
-import React, { Component } from "react";
-import styled, { css } from "react-emotion";
+import React, { Component } from 'react';
+import styled, { css } from 'react-emotion';
+
+import { Button } from 'rmwc/Button';
 
 const StyledDiv = styled.div`
   display: flex;
@@ -14,9 +16,9 @@ class UserLinks extends Component {
     const { userLinks } = this.props.config;
     const { labeled } = this.props;
     return userLinks.map(link => (
-      <button key={link.label} href={link.url}>
-        {labeled ? link.label : ""}
-      </button>
+      <Button key={link.label} href={link.url}>
+        {labeled ? link.label : ''}
+      </Button>
     ));
   }
   render() {

@@ -43,13 +43,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
-    const postPage = path.resolve("src/templates/post.jsx");
     const tagPage = path.resolve("src/templates/tag.jsx");
     const categoryPage = path.resolve("src/templates/category.jsx");
-    const widePage = path.resolve("src/templates/wide.jsx");
-    const pagePage = path.resolve("src/templates/page.jsx");
-    const jobLandingPage = path.resolve("src/templates/job-landing.jsx");
-
     // https://www.gatsbyjs.org/docs/creating-and-modifying-pages/#choosing-the-page-layout
     // if (page.path.match(/^\/landing-page/)) {
     //   // It's assumed that `landingPage.js` exists in the `/layouts/` directory
@@ -69,6 +64,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                   frontmatter {
                     tags
                     category
+                    template
                   }
                   fields {
                     slug
@@ -89,93 +85,32 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const categorySet = new Set();
 
         result.data.allMarkdownRemark.edges.forEach(edge => {
-          if (_.get(edge, "node.frontmatter.template") === "post") {
+          if (_.get(edge, "node.frontmatter.layout") === "no-header-footer") {
             createPage({
               path: edge.node.fields.slug,
-              component: postPage,
-              context: { slug: edge.node.fields.slug }
-            });
-          } else if (
-            _.get(edge, "node.frontmatter.template") === "wide" &&
-            _.get(edge, "node.frontmatter.layout") === "no-header-footer"
-          ) {
-            createPage({
-              path: edge.node.fields.slug,
-              component: widePage,
+              // https://github.com/movementkitchen/website/blob/master/gatsby-node.js#L52-L54
+              component: path.resolve(
+                edge.node.frontmatter.template
+                  ? `./src/templates/${edge.node.frontmatter.template}.jsx`
+                  : "./src/templates/page.jsx"
+              ),
               layout: `no-header-footer`,
-              context: { slug: edge.node.fields.slug }
-            });
-          } else if (
-            _.get(edge, "node.frontmatter.template") === "page" &&
-            _.get(edge, "node.frontmatter.layout") === "no-header-footer"
-          ) {
-            createPage({
-              path: edge.node.fields.slug,
-              component: pagePage,
-              layout: `no-header-footer`,
-              context: { slug: edge.node.fields.slug }
-            });
-          } else if (_.get(edge, "node.frontmatter.template") === "wide") {
-            createPage({
-              path: edge.node.fields.slug,
-              component: widePage,
               context: { slug: edge.node.fields.slug }
             });
           } else {
             // this is the Default
             createPage({
               path: edge.node.fields.slug,
-              component: pagePage,
+              component: path.resolve(
+                edge.node.frontmatter.template
+                  ? `./src/templates/${edge.node.frontmatter.template}.jsx`
+                  : "./src/templates/page.jsx"
+              ),
               context: {
                 slug: edge.node.fields.slug
               }
             });
           }
-          // if (_.get(edge, "node.frontmatter.layout") === "no-header-footer") {
-          //   createPage({
-          //     path: edge.node.fields.slug,
-          //     component: path.resolve(
-          //       `src/templates/${String(edge.node.frontmatter.template)}.jsx`
-          //     ),
-          //     layout: `no-header-footer`,
-          //     context: { slug: edge.node.fields.slug }
-          //   });
-          // } else if (_.get(edge, "node.frontmatter.template") === "wide") {
-          //   createPage({
-          //     path: edge.node.fields.slug,
-          //     component: widePage,
-          //     context: { slug: edge.node.fields.slug }
-          //   });
-          // } else if (
-          //   _.get(edge, "node.frontmatter.template") === "job-landing"
-          // ) {
-          //   createPage({
-          //     path: edge.node.fields.slug,
-          //     component: jobLandingPage,
-          //     context: { slug: edge.node.fields.slug }
-          //   });
-          // } else if (_.get(edge, "node.frontmatter.template") === "post") {
-          //   createPage({
-          //     path: edge.node.fields.slug,
-          //     component: postPage,
-          //     context: { slug: edge.node.fields.slug }
-          //   });
-          // } else if (_.get(edge, "node.frontmatter.template") === null) {
-          //   createPage({
-          //     path: edge.node.fields.slug,
-          //     component: pagePage,
-          //     context: { slug: edge.node.fields.slug }
-          //   });
-          // } else {
-          //   // this is the Default, it will select the template specified in the frontmatter
-          //   createPage({
-          //     path: edge.node.fields.slug,
-          //     component: path.resolve(
-          //       `src/templates/${String(edge.node.frontmatter.template)}.jsx`
-          //     ),
-          //     context: { slug: edge.node.fields.slug }
-          //   });
-          // }
 
           if (edge.node.frontmatter.tags) {
             edge.node.frontmatter.tags.forEach(tag => {

@@ -1,5 +1,23 @@
-import React from "react";
-import Link from "gatsby-link";
+import React from 'react';
+import Link from 'gatsby-link';
+
+import {
+  Card,
+  CardPrimaryAction,
+  CardMedia,
+  CardAction,
+  CardActions,
+  CardActionButtons,
+  CardActionIcons,
+} from 'rmwc/Card';
+
+import { Typography } from 'rmwc/Typography';
+
+import { Grid, GridCell } from 'rmwc/Grid';
+import { Elevation } from 'rmwc/Elevation';
+import styled from 'react-emotion';
+
+import Img from 'gatsby-image';
 
 class PostListing extends React.Component {
   getPostList() {
@@ -8,11 +26,13 @@ class PostListing extends React.Component {
       postList.push({
         path: postEdge.node.fields.slug,
         tags: postEdge.node.frontmatter.tags,
-        cover: postEdge.node.frontmatter.cover,
+        // cover: postEdge.node.frontmatter.cover,
+        cover: postEdge.node.frontmatter.cover.childImageSharp.sizes,
         title: postEdge.node.frontmatter.title,
         date: postEdge.node.frontmatter.date,
         excerpt: postEdge.node.excerpt,
-        timeToRead: postEdge.node.timeToRead
+        timeToRead: postEdge.node.timeToRead,
+        // author: postEdge.node.frontmatter.author.id // <<< Breaks build???
       });
     });
     return postList;
@@ -20,14 +40,75 @@ class PostListing extends React.Component {
   render() {
     const postList = this.getPostList();
     return (
-      <div>
+      <Grid>
         {/* Your post list here. */
         postList.map(post => (
-          <Link to={post.path} key={post.title}>
-            <h1>{post.title}</h1>
-          </Link>
+          <GridCell span="4" key={post.title}>
+            {/* <Card style={{ width: "21rem" }}> */}
+            {/* <Card style={{ width: "21rem", margin: "3rem" }}> */}
+            <Card>
+              <Link to={post.path}>
+                <CardPrimaryAction>
+                  <CardMedia sixteenByNine>
+                    <Img
+                      sizes={post.cover}
+                      style={{
+                        position: 'absolute',
+                        left: 0,
+                        top: 0,
+                        width: '100%',
+                        height: '100%',
+                      }}
+                    />
+                  </CardMedia>
+                  <div style={{ padding: '0 1rem 1rem 1rem' }}>
+                    <Typography use="title" tag="h2">
+                      {post.title}
+                    </Typography>
+                    <Typography
+                      use="subheading1"
+                      tag="h3"
+                      theme="text-secondary-on-background"
+                      style={{ marginTop: '-1rem' }}
+                    >
+                      by {post.author}
+                    </Typography>
+                    <Typography
+                      use="body1"
+                      tag="div"
+                      theme="text-secondary-on-background"
+                    >
+                      Visit ten places on our planet that are undergoing the
+                      biggest changes today.
+                    </Typography>
+                  </div>
+                </CardPrimaryAction>
+              </Link>
+              <CardActions>
+                <CardActionButtons>
+                  <CardAction>Read</CardAction>
+                  {/* <CardAction>Bookmark</CardAction> */}
+                </CardActionButtons>
+                <CardActionIcons>
+                  <CardAction
+                    iconToggle
+                    on={{
+                      label: 'Remove from favorites',
+                      content: 'favorite',
+                    }}
+                    off={{
+                      label: 'Add to favorites',
+                      content: 'favorite_border',
+                    }}
+                  />
+                  <CardAction icon use="share" />
+                  {/* <CardAction icon use="more_vert" /> */}
+                </CardActionIcons>
+              </CardActions>
+            </Card>
+          </GridCell>
         ))}
-      </div>
+      </Grid>
     );
   }
 }

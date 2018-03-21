@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   FacebookShareButton,
   GooglePlusShareButton,
@@ -16,10 +16,10 @@ import {
   GooglePlusIcon,
   LinkedinIcon,
   RedditIcon,
-  generateShareIcon
-} from "react-share";
-import config from "../../../data/SiteConfig";
-import styled, { css } from "react-emotion";
+  generateShareIcon,
+} from 'react-share';
+import config from '../../../data/SiteConfig';
+import styled, { css } from 'react-emotion';
 
 // .social-links > div {
 //   margin: 5px 15px;
@@ -45,7 +45,7 @@ class SocialLinks extends Component {
     const post = postNode.frontmatter;
     const url = config.siteUrl + config.pathPrefix + postPath;
     const iconSize = mobile ? 36 : 48;
-    const filter = count => (count > 0 ? count : "");
+    const filter = count => (count > 0 ? count : '');
 
     return (
       <Links>

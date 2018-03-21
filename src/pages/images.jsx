@@ -1,38 +1,51 @@
-import React from "react";
-import Img from "gatsby-image";
+import React from 'react';
+import Img from 'gatsby-image';
+import { Grid, GridCell } from 'rmwc/Grid';
 
 const BlurUp = ({ data }) => (
   <div>
-    <h2>Blur Up</h2>
-    <Img
-      style={{ display: `inherit` }}
-      css={{
-        float: `right`,
-        "&": {
-          "@media (min-width: 500px)": {
-            display: `none`
-          }
-        }
-      }}
-      title={`Photo by Redd Angelo on Unsplash`}
-      resolutions={data.reddImageMobile.resolutions}
-    />
-    <Img
-      style={{ display: `inherit` }}
-      css={{
-        float: `right`,
-        display: `none`,
-        "@media (min-width: 500px)": {
-          display: `inline-block`
-        }
-      }}
-      title={`Photo by Redd Angelo on Unsplash`}
-      resolutions={data.reddImage.resolutions}
-    />
-    <Img
-      sizes={data.kenImage.sizes}
-      title={`Photo by Ken Treloar on Unsplash`}
-    />
+    <Grid tag="section">
+      <GridCell span="3" />
+      <GridCell span="6">
+        <h2>Blur Up</h2>
+        <div>
+          <Img
+            style={{ display: `inherit` }}
+            css={{
+              // float: `right`,
+              '&': {
+                '@media (min-width: 500px)': {
+                  display: `none`,
+                },
+              },
+            }}
+            title={`Photo by Redd Angelo on Unsplash`}
+            resolutions={data.reddImageMobile.resolutions}
+          />
+        </div>
+        <div>
+          <Img
+            style={{ display: `inherit` }}
+            css={{
+              // float: `right`,
+              display: `none`,
+              '@media (min-width: 500px)': {
+                display: `inline-block`,
+              },
+            }}
+            title={`Photo by Redd Angelo on Unsplash`}
+            resolutions={data.reddImage.resolutions}
+          />
+        </div>
+        <div>
+          <Img
+            sizes={data.kenImage.sizes}
+            title={`Photo by Ken Treloar on Unsplash`}
+          />
+        </div>
+      </GridCell>
+      <GridCell span="3" />
+    </Grid>
   </div>
 );
 
