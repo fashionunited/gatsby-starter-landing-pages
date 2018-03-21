@@ -84,11 +84,11 @@
       "node_modules/.bin/gatsby build && firebase deploy -P material-components-web",
     "heroku-postbuild": "gatsby build",
     "clean": "rm -rf public",
-    "lint:js": "eslint --ext .js,.jsx .",
+    "lint": "eslint --ext .js,.jsx .",
     "lint-fix": "eslint --ext .js,.jsx --fix .",
     "lint:md": "remark src/pages/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
-    "format:js": "prettier 'src/**/*.{js,jsx}' --write",
+    "format": "prettier 'src/**/*.{js,jsx}' --write",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "remarkConfig": {
