@@ -85,6 +85,7 @@
     "heroku-postbuild": "gatsby build",
     "clean": "rm -rf public",
     "lint:js": "eslint --ext .js,.jsx .",
+    "lint-fix": "eslint --ext .js,.jsx --fix .",
     "lint:md": "remark src/pages/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
     "format:js": "prettier 'src/**/*.{js,jsx}' --write",
