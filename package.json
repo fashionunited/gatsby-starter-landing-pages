@@ -3,6 +3,13 @@
   "description": "GatsbyJS starter with landing pages and advanced SEO.",
   "version": "1.1.0",
   "author": "Joost van der Laan <joost@fashionunited.com>",
+  "browserlist": [
+    "last 2 versions",
+    "safari >= 9",
+    "edge >= 13",
+    "chrome >= 50",
+    "firefox >= 50"
+  ],
   "dependencies": {
     "babel-plugin-emotion": "^9.0.1",
     "babel-plugin-lodash": "^3.3.2",
@@ -71,9 +78,7 @@
     "stylelint-config-standard": "^18.0.0",
     "write-good": "^0.11.3"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -85,7 +90,8 @@
     "build:pp": "node_modules/.bin/gatsby build --prefix-paths",
     "build:gh": "npm run build:pp && gh-pages -d public",
     "build:fire": "node_modules/.bin/gatsby build && firebase deploy",
-    "build:material": "node_modules/.bin/gatsby build && firebase deploy -P material-components-web",
+    "build:material":
+      "node_modules/.bin/gatsby build && firebase deploy -P material-components-web",
     "heroku-postbuild": "gatsby build",
     "clean": "rm -rf public",
     "lint": "eslint --ext .js,.jsx .",
@@ -96,8 +102,6 @@
     "test": "yarn lint"
   },
   "remarkConfig": {
-    "plugins": [
-      "remark-preset-lint-recommended"
-    ]
+    "plugins": ["remark-preset-lint-recommended"]
   }
 }
