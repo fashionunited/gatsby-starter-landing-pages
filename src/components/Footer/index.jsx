@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
+import styled, { css } from 'react-emotion';
+import { Typography } from 'rmwc/Typography';
 import UserLinks from '../UserLinks/UserLinks';
 import config from '../../../data/SiteConfig';
-import styled, { css } from 'react-emotion';
-
-import { Typography } from 'rmwc/Typography';
 
 const StyledFooter = styled.footer`
   justify-content: center;
@@ -18,15 +17,6 @@ const StyledTypograhy = styled(Typography)`
     --mdc-theme-text-secondary-on-background,
     rgba(0, 0, 0, 0.54)
   ) !important;
-`;
-
-const NoticeContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-  margin-top: 25px;
 `;
 
 const WrapperUserLinks = styled.section`
@@ -68,7 +58,7 @@ const ulStyle = css`
 class Footer extends Component {
   render() {
     // const { config } = this.props;
-    const url = config.siteRss;
+    // const url = config.siteRss;
     const copyright = config.copyright;
     if (!copyright) {
       return null;

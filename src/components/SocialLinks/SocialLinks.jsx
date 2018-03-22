@@ -16,18 +16,10 @@ import {
   GooglePlusIcon,
   LinkedinIcon,
   RedditIcon,
-  generateShareIcon,
+  // generateShareIcon,
 } from 'react-share';
 import config from '../../../data/SiteConfig';
-import styled, { css } from 'react-emotion';
-
-// .social-links > div {
-//   margin: 5px 15px;
-// }
-
-// .share-count {
-//   text-align: center;
-// }
+import styled from 'react-emotion';
 
 const Links = styled.div`
   display: flex;

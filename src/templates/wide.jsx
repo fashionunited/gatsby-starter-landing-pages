@@ -1,5 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import styled from 'react-emotion';
+import { DFPSlotsProvider, AdSlot } from 'react-dfp';
 import UserInfo from '../components/UserInfo/UserInfo';
 import Disqus from '../components/Disqus/Disqus';
 import PostTags from '../components/PostTags/PostTags';
@@ -7,8 +9,6 @@ import SocialLinks from '../components/SocialLinks/SocialLinks';
 import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
 import './b16-tomorrow-dark.css';
-import styled, { css } from 'react-emotion';
-import { DFPSlotsProvider, AdSlot } from 'react-dfp';
 
 const Meta = styled.div`
   display: flex;

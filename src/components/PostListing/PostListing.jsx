@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'gatsby-link';
-
 import {
   Card,
   CardPrimaryAction,
@@ -10,13 +9,8 @@ import {
   CardActionButtons,
   CardActionIcons,
 } from 'rmwc/Card';
-
 import { Typography } from 'rmwc/Typography';
-
 import { Grid, GridCell } from 'rmwc/Grid';
-import { Elevation } from 'rmwc/Elevation';
-import styled from 'react-emotion';
-
 import Img from 'gatsby-image';
 
 class PostListing extends React.Component {

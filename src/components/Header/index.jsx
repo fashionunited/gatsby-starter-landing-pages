@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
-import styled, { css } from 'react-emotion';
-
+import styled from 'react-emotion';
+import { Theme } from 'rmwc/Theme';
 import {
   Toolbar,
   ToolbarRow,
@@ -9,15 +9,9 @@ import {
   ToolbarMenuIcon,
   ToolbarTitle,
   ToolbarIcon,
-  ToolbarFixedAdjust,
+  // ToolbarFixedAdjust,
 } from 'rmwc/Toolbar';
 
-import { Theme } from 'rmwc/Theme';
-
-const StyledToolbar = styled(Toolbar)`
-  background-color: #fff;
-  color: #000;
-`;
 export default class Navbar extends Component {
   render() {
     return (
@@ -26,9 +20,9 @@ export default class Navbar extends Component {
           <ToolbarRow>
             <ToolbarSection alignStart>
               <ToolbarMenuIcon use="menu" onClick={this.props.toggle} />
-              <ToolbarTitle tag="a" href="/">
-                Toolbar
-              </ToolbarTitle>
+              <Link to="/">
+                <ToolbarTitle>Toolbar</ToolbarTitle>
+              </Link>
             </ToolbarSection>
             <ToolbarSection alignEnd>
               <ToolbarIcon use="account_circle" onClick={this.props.login} />

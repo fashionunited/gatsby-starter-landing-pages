@@ -1,5 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import styled from 'react-emotion';
+import Typography from 'rmwc/Typography';
+import Img from 'gatsby-image';
 import UserInfo from '../components/UserInfo/UserInfo';
 import Disqus from '../components/Disqus/Disqus';
 import PostTags from '../components/PostTags/PostTags';
@@ -7,14 +10,6 @@ import SocialLinks from '../components/SocialLinks/SocialLinks';
 import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
 import './b16-tomorrow-dark.css';
-import styled, { css } from 'react-emotion';
-
-import Typography from 'rmwc/Typography';
-import { Grid, GridCell } from 'rmwc/Grid';
-import CardMedia from 'rmwc/Card';
-
-import ProgressiveImage from 'react-progressive-image';
-import Img from 'gatsby-image';
 
 const Meta = styled.div`
   display: flex;
@@ -110,26 +105,6 @@ export default class PostTemplate extends React.Component {
             <AspectRatioPlaceholder>
               <StyledFigure>
                 <Img sizes={plaatje} />
-
-                {/* <ProgressiveImage
-                  src={`${post.cover}`}
-                  placeholder="data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABQBQCdASoqABwAP/3+/3+/urWyMBVYA/A/iWIAAR7p/Y3etgh4KD8QqXEZj6waibITSIAA/cndnUz4/z4LEgByYUql75Cq/12W33KFIKQpc8L0Dt19C7NFXin0tKlxd70dzSF978msbuqLjDgAAA=="
-                >
-                  {src => (
-                    <img
-                      alt={post.title}
-                      src={src}
-                      style={{
-                        maxWidth: "100%"
-                        // backgroundImage: `url(${src})`,
-                        // backgroundSize: 'cover',
-                        // height: '1186px',
-                        // height: '36rem', // so far it looks the placeholder needs height to load properly sized
-                        // height: '24.626rem',
-                      }}
-                    />
-                  )}
-                </ProgressiveImage> */}
                 <Typography use="caption">{post.caption}</Typography>
               </StyledFigure>
             </AspectRatioPlaceholder>

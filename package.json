@@ -39,6 +39,7 @@
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.1",
     "react": "^15.6.1",
+    "react-dfp": "^0.6.0",
     "react-disqus-comments": "^1.1.1",
     "react-dom": "^15.6.1",
     "react-emotion": "^9.0.2",
@@ -50,17 +51,18 @@
     "typeface-roboto": "^0.0.54"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.2",
     "cli-glob": "^0.1.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.2",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.5.1",
     "gh-pages": "^1.1.0",
     "jest": "^21.2.1",
     "prettier": "^1.9.2",
-    "react-dfp": "^0.6.0",
     "remark-cli": "^4.0.0",
     "remark-preset-lint-recommended": "^3.0.1",
     "stylefmt": "^6.0.0",
@@ -68,7 +70,9 @@
     "stylelint-config-standard": "^18.0.0",
     "write-good": "^0.11.3"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -80,8 +84,7 @@
     "build:pp": "node_modules/.bin/gatsby build --prefix-paths",
     "build:gh": "npm run build:pp && gh-pages -d public",
     "build:fire": "node_modules/.bin/gatsby build && firebase deploy",
-    "build:material":
-      "node_modules/.bin/gatsby build && firebase deploy -P material-components-web",
+    "build:material": "node_modules/.bin/gatsby build && firebase deploy -P material-components-web",
     "heroku-postbuild": "gatsby build",
     "clean": "rm -rf public",
     "lint": "eslint --ext .js,.jsx .",
@@ -89,9 +92,11 @@
     "lint:md": "remark src/pages/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
     "format": "prettier 'src/**/*.{js,jsx}' --write",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "yarn lint"
   },
   "remarkConfig": {
-    "plugins": ["remark-preset-lint-recommended"]
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
   }
 }

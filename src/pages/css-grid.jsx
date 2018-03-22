@@ -1,7 +1,6 @@
 import React from 'react';
-import Img from 'gatsby-image';
 import { Grid, GridCell } from 'rmwc/Grid';
-import styled, { css } from 'react-emotion';
+import { css } from 'react-emotion';
 
 const gridStyle = css`
   /* Repeat 6 1fr rows named "row" and 6 1fr columns named "col" */
@@ -88,7 +87,7 @@ const gridStyle = css`
   }
 `;
 
-const CssGrid = ({ data }) => (
+const CssGrid = () => (
   <div>
     <Grid tag="section">
       <GridCell span="3" />

@@ -1,15 +1,30 @@
 {
-  "extends": ["airbnb", "prettier"],
-  "plugins": ["react", "jsx-a11y", "import"],
-  "rules": {
-    "react/prefer-stateless-function": "off",
-    "react/prop-types": "off",
-    "react/no-danger": "off"
-  },
-  "settings": {
-    "import/core-modules": []
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": [
+    "prettier"
+  ],
+  "globals": {
+    "graphql": true
   },
   "env": {
     "browser": true
+  },
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 80
+      }
+    ],
+    "prettier/prettier": [
+      2
+    ],
+    "no-console": [
+      2
+    ],
+    "import/extensions": [
+      0
+    ]
   }
 }

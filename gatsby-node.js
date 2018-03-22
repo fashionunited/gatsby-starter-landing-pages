@@ -1,39 +1,39 @@
-const path = require("path");
-const _ = require("lodash");
-const webpackLodashPlugin = require("lodash-webpack-plugin");
+const path = require('path');
+const _ = require('lodash');
+const webpackLodashPlugin = require('lodash-webpack-plugin');
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators;
   let slug;
-  if (node.internal.type === "MarkdownRemark") {
+  if (node.internal.type === 'MarkdownRemark') {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
     if (
-      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, "slug")
+      Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug')
     ) {
       slug = `/${_.kebabCase(node.frontmatter.slug)}`;
     }
     if (
-      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, "title")
+      Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
     ) {
       slug = `/${_.kebabCase(node.frontmatter.title)}`;
     }
     if (
-      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, "slug") &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, "domain")
+      Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug') &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, 'domain')
     ) {
       slug = `${_.kebabCase(node.frontmatter.domain)}/${node.frontmatter.slug}`;
-    } else if (parsedFilePath.name !== "index" && parsedFilePath.dir !== "") {
+    } else if (parsedFilePath.name !== 'index' && parsedFilePath.dir !== '') {
       slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
-    } else if (parsedFilePath.dir === "") {
+    } else if (parsedFilePath.dir === '') {
       slug = `/${parsedFilePath.name}/`;
     } else {
       slug = `/${parsedFilePath.dir}/`;
     }
-    createNodeField({ node, name: "slug", value: slug });
+    createNodeField({ node, name: 'slug', value: slug });
   }
 };
 
@@ -43,8 +43,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
-    const tagPage = path.resolve("src/templates/tag.jsx");
-    const categoryPage = path.resolve("src/templates/category.jsx");
+    const tagPage = path.resolve('src/templates/tag.jsx');
+    const categoryPage = path.resolve('src/templates/category.jsx');
     // https://www.gatsbyjs.org/docs/creating-and-modifying-pages/#choosing-the-page-layout
     // if (page.path.match(/^\/landing-page/)) {
     //   // It's assumed that `landingPage.js` exists in the `/layouts/` directory
@@ -73,7 +73,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               }
             }
           }
-        `
+        `,
       ).then(result => {
         if (result.errors) {
           /* eslint no-console: "off" */
@@ -85,17 +85,17 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const categorySet = new Set();
 
         result.data.allMarkdownRemark.edges.forEach(edge => {
-          if (_.get(edge, "node.frontmatter.layout") === "no-header-footer") {
+          if (_.get(edge, 'node.frontmatter.layout') === 'no-header-footer') {
             createPage({
               path: edge.node.fields.slug,
               // https://github.com/movementkitchen/website/blob/master/gatsby-node.js#L52-L54
               component: path.resolve(
                 edge.node.frontmatter.template
                   ? `./src/templates/${edge.node.frontmatter.template}.jsx`
-                  : "./src/templates/page.jsx"
+                  : './src/templates/page.jsx',
               ),
-              layout: `no-header-footer`,
-              context: { slug: edge.node.fields.slug }
+              layout: 'no-header-footer',
+              context: { slug: edge.node.fields.slug },
             });
           } else {
             // this is the Default
@@ -104,11 +104,11 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               component: path.resolve(
                 edge.node.frontmatter.template
                   ? `./src/templates/${edge.node.frontmatter.template}.jsx`
-                  : "./src/templates/page.jsx"
+                  : './src/templates/page.jsx',
               ),
               context: {
-                slug: edge.node.fields.slug
-              }
+                slug: edge.node.fields.slug,
+              },
             });
           }
 
@@ -129,8 +129,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             path: `/tags/${_.kebabCase(tag)}/`,
             component: tagPage,
             context: {
-              tag
-            }
+              tag,
+            },
           });
         });
 
@@ -140,17 +140,17 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             path: `/categories/${_.kebabCase(category)}/`,
             component: categoryPage,
             context: {
-              category
-            }
+              category,
+            },
           });
         });
-      })
+      }),
     );
   });
 };
 
 exports.modifyWebpackConfig = ({ config, stage }) => {
-  if (stage === "build-javascript") {
-    config.plugin("Lodash", webpackLodashPlugin, null);
+  if (stage === 'build-javascript') {
+    config.plugin('Lodash', webpackLodashPlugin, null);
   }
 };

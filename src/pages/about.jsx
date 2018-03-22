@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import { css } from 'react-emotion';
 import Helmet from 'react-helmet';
+import { Grid, GridCell } from 'rmwc/Grid';
 import About from '../components/About/About';
 import config from '../../data/SiteConfig';
-import { Grid, GridCell } from 'rmwc/Grid';
 
-const imgStyle = css`
-  border-radius: 5px;
-`;
 class AboutPage extends Component {
   render() {
     return (

@@ -1,8 +1,6 @@
 /* eslint-disable no-undef, react/prop-types */
 import React from 'react';
 import Link from 'gatsby-link';
-import colors from '../utils/colors';
-
 import { Grid, GridCell } from 'rmwc/Grid';
 
 export default ({ data }) => {

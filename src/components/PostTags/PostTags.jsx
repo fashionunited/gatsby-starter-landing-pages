@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import Link from 'gatsby-link';
-import styled, { css } from 'react-emotion';
+import styled from 'react-emotion';
 import { Button } from 'rmwc/Button';
 
 export const StyledLink = styled.li`

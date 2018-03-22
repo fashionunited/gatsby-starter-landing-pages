@@ -10,37 +10,37 @@ const BlurUp = ({ data }) => (
         <h2>Blur Up</h2>
         <div>
           <Img
-            style={{ display: `inherit` }}
+            style={{ display: 'inherit' }}
             css={{
               // float: `right`,
               '&': {
                 '@media (min-width: 500px)': {
-                  display: `none`,
+                  display: 'none',
                 },
               },
             }}
-            title={`Photo by Redd Angelo on Unsplash`}
+            title={'Photo by Redd Angelo on Unsplash'}
             resolutions={data.reddImageMobile.resolutions}
           />
         </div>
         <div>
           <Img
-            style={{ display: `inherit` }}
+            style={{ display: 'inherit' }}
             css={{
               // float: `right`,
-              display: `none`,
+              display: 'none',
               '@media (min-width: 500px)': {
-                display: `inline-block`,
+                display: 'inline-block',
               },
             }}
-            title={`Photo by Redd Angelo on Unsplash`}
+            title={'Photo by Redd Angelo on Unsplash'}
             resolutions={data.reddImage.resolutions}
           />
         </div>
         <div>
           <Img
             sizes={data.kenImage.sizes}
-            title={`Photo by Ken Treloar on Unsplash`}
+            title={'Photo by Ken Treloar on Unsplash'}
           />
         </div>
       </GridCell>

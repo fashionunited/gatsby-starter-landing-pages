@@ -7,23 +7,21 @@ class Login extends Component {
     this.setState({ ...this.state, [val]: evt.target.value });
   };
 
-  loginForm = () => {
-    return (
-      <div>
-        <TextField
-          label="email"
-          fullwidth
-          onChange={this.handleChange('email')}
-        />
-        <TextField
-          label="Password"
-          type="password"
-          fullwidth
-          onChange={this.handleChange('password')}
-        />
-      </div>
-    );
-  };
+  loginForm = () => (
+    <div>
+      <TextField
+        label="email"
+        fullwidth
+        onChange={this.handleChange('email')}
+      />
+      <TextField
+        label="Password"
+        type="password"
+        fullwidth
+        onChange={this.handleChange('password')}
+      />
+    </div>
+  );
 
   render() {
     return (
