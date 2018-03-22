@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; import PropTypes from 'prop-types';
 import { Grid, GridCell } from 'rmwc/Grid';
 import { css } from 'react-emotion';
 

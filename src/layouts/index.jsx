@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; import PropTypes from 'prop-types';
 import styled, { injectGlobal } from 'react-emotion';
 import Helmet from 'react-helmet';
 import config from '../../data/SiteConfig';
@@ -42,6 +42,7 @@ injectGlobal`
 /* eslint-enable */
 
 export default class MainLayout extends React.Component {
+
   state = { drawer: false, login: false };
 
   drawerToggle = () => {
