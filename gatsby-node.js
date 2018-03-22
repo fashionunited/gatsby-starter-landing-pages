@@ -37,22 +37,12 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   }
 };
 
-// Implement the Gatsby API “onCreatePage”. This is
-// called after every page is created.
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
     const tagPage = path.resolve('src/templates/tag.jsx');
     const categoryPage = path.resolve('src/templates/category.jsx');
-    // https://www.gatsbyjs.org/docs/creating-and-modifying-pages/#choosing-the-page-layout
-    // if (page.path.match(/^\/landing-page/)) {
-    //   // It's assumed that `landingPage.js` exists in the `/layouts/` directory
-    //   page.layout = "workingAtLayout";
-
-    //   // Update the page.
-    //   createPage(page);
-    // }
 
     resolve(
       graphql(
@@ -88,7 +78,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           if (_.get(edge, 'node.frontmatter.layout') === 'no-header-footer') {
             createPage({
               path: edge.node.fields.slug,
-              // https://github.com/movementkitchen/website/blob/master/gatsby-node.js#L52-L54
               component: path.resolve(
                 edge.node.frontmatter.template
                   ? `./src/templates/${edge.node.frontmatter.template}.jsx`

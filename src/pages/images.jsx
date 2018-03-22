@@ -1,4 +1,5 @@
-import React from 'react'; import PropTypes from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import { Grid, GridCell } from 'rmwc/Grid';
 

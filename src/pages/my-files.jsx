@@ -1,6 +1,7 @@
 // import React from 'react';
 
 // export default ({ data }) => {
+// /* eslint no-console: "off" */
 //   console.log(data);
 //   return (
 //     <div>

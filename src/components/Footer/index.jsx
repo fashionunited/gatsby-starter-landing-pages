@@ -88,7 +88,9 @@ class Footer extends Component {
             <StyledTypograhy
               tag="h4"
               use="subheading1"
-              // theme="text-secondary-on-background" // As of now this only works with RMWC components directly, not when they are passed throug styled components / Emotion
+              // As of now this only works with RMWC components directly,
+              // not when they are passed throug styled components / Emotion
+              // theme="text-secondary-on-background"
             >
               {copyright}
             </StyledTypograhy>
