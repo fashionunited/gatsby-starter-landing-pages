@@ -8,7 +8,7 @@ import normalize from 'normalize.css';
 // import "typeface-roboto";
 // import "material-design-icons/iconfont/material-icons.css";
 
-export default class MainLayout extends React.Component {
+export default class NoHeaderNoFooter extends React.Component {
   getLocalTitle() {
     function capitalize(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);

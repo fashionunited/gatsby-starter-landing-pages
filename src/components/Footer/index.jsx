@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Link from 'gatsby-link';
 import styled, { css } from 'react-emotion';
 import { Typography } from 'rmwc/Typography';
