@@ -22,7 +22,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-sass', // Workaround for RMWC CSS errors in postcss
     'gatsby-plugin-emotion',
-    'gatsby-plugin-react-next',
     {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
@@ -59,6 +58,7 @@ module.exports = {
     'gatsby-plugin-catch-links',
     'gatsby-plugin-twitter',
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-react-next',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
