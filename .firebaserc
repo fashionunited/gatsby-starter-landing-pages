@@ -1,6 +1,6 @@
 {
   "projects": {
     "production": "gatsby-starter-landing-pages",
-    "material-components-web": "gatsby-starter-landing-pages-m"
+    "staging": "landing-pages-staging"
   }
 }

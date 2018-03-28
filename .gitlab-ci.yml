@@ -1,0 +1,55 @@
+image: node:latest
+
+stages:
+  - deploy
+  - clear-cache
+
+# This is NOT a job and will be ignored by GitLab-CI
+.shared_hidden_key: &shared  # This is an anchor
+  before_script:
+    - yarn add sharp@0.17.3 #latest sharp needs newer libvips but that is not in node:8 docker image
+    - yarn global add --silent gatsby # -sg to keep logs short - switch to -g if you want to see errors.
+    - yarn global add firebase-tools
+    - yarn install --silent
+    - yarn build # --prefix-links Needed when NOT using a custom domain instead of GitLab Pages gitlab.io
+
+deploy_staging:
+  stage: deploy
+   <<: *shared  # This is a reference to the anchor.
+  script:
+    - echo "Deploy to staging server"
+  environment:
+    name: staging
+    url: https://landing-pages-staging.firebaseapp.com/
+
+deploy_production:
+  cache:
+    untracked: true
+    key: ${CI_BUILD_REF_NAME}
+    paths:
+    - node_modules/
+  stage: deploy
+   <<: *shared  # This is a reference to the anchor.
+  script:
+    - firebase use --token $FIREBASE_TOKEN production
+    - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --token $FIREBASE_TOKEN
+  environment:
+    name: production
+    url: https://gatsby-starter-landing-pages.firebaseapp.com/
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+
+clear-cache-cloudflare:
+  image: fuww/alpine-curl-ssl-jq:latest
+  only:
+    - master
+  stage: clear-cache
+  dependencies:
+    - pages
+  script:
+    - ./clear_cache.sh
+  tags:
+    - docker
