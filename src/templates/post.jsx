@@ -8,12 +8,9 @@ import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
 import './b16-tomorrow-dark.css';
 import styled, { css } from 'react-emotion';
-
 import Typography from 'rmwc/Typography';
 import { Grid, GridCell } from 'rmwc/Grid';
 import CardMedia from 'rmwc/Card';
-
-import ProgressiveImage from 'react-progressive-image';
 import Img from 'gatsby-image';
 
 const Meta = styled.div`
