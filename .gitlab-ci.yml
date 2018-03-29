@@ -67,6 +67,23 @@ sast:
     paths: [gl-sast-report.json]
 
 pages:
+  image: node:latest
+  cache:
+    untracked: true
+    key: ${CI_BUILD_REF_NAME}
+    paths:
+    - node_modules/
+  stage: build
+  script:
+  - yarn install --silent
+  - yarn build # --prefix-links Needed when NOT using a custom domain instead of GitLab Pages gitlab.io
+  artifacts:
+    paths:
+    - public
+  except:
+  - master
+
+firebase:
   cache:
     untracked: true
     key: ${CI_BUILD_REF_NAME}
