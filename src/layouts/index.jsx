@@ -44,13 +44,6 @@ injectGlobal`
 export default class MainLayout extends React.Component {
   state = { drawer: false, login: false };
 
-  drawerToggle = () => {
-    this.setState({ ...this.state, drawer: !this.state.drawer });
-  };
-  loginToggle = () => {
-    this.setState({ ...this.state, login: !this.state.login });
-  };
-
   getLocalTitle() {
     function capitalize(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
@@ -85,6 +78,14 @@ export default class MainLayout extends React.Component {
     }
     return title;
   }
+
+  drawerToggle = () => {
+    this.setState({ ...this.state, drawer: !this.state.drawer });
+  };
+  loginToggle = () => {
+    this.setState({ ...this.state, login: !this.state.login });
+  };
+
   render() {
     const { children } = this.props;
     return (
