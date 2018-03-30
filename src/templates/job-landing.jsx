@@ -8,36 +8,34 @@ import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
 import './b16-tomorrow-dark.css';
 
-export default class jobLandingTemplate extends React.Component {
-  render() {
-    const { slug } = this.props.pathContext;
-    const postNode = this.props.data.markdownRemark;
-    const post = postNode.frontmatter;
-    if (!post.id) {
-      post.id = slug;
-    }
-    if (!post.category_id) {
-      post.category_id = config.postDefaultCategoryID;
-    }
-    return (
-      <div>
-        <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
-        </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
-        <div>
-          <h1>{post.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          <div className="post-meta">
-            <PostTags tags={post.tags} />
-            <SocialLinks postPath={slug} postNode={postNode} />
-          </div>
-          <UserInfo config={config} />
-          <Disqus postNode={postNode} />
-        </div>
-      </div>
-    );
+export default function jobLandingTemplate(props) {
+  const { slug } = props.pathContext;
+  const postNode = props.data.markdownRemark;
+  const post = postNode.frontmatter;
+  if (!post.id) {
+    post.id = slug;
   }
+  if (!post.category_id) {
+    post.category_id = config.postDefaultCategoryID;
+  }
+  return (
+    <div>
+      <Helmet>
+        <title>{`${post.title} | ${config.siteTitle}`}</title>
+      </Helmet>
+      <SEO postPath={slug} postNode={postNode} postSEO />
+      <div>
+        <h1>{post.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+        <div className="post-meta">
+          <PostTags tags={post.tags} />
+          <SocialLinks postPath={slug} postNode={postNode} />
+        </div>
+        <UserInfo config={config} />
+        <Disqus postNode={postNode} />
+      </div>
+    </div>
+  );
 }
 
 /* eslint no-undef: "off" */

@@ -5,23 +5,21 @@ import SEO from '../../components/SEO/SEO';
 import config from '../../../data/SiteConfig';
 import { Grid, GridCell } from 'rmwc/Grid';
 
-class Index extends React.Component {
-  render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
-    return (
-      <div className="index-container">
-        <Helmet title={config.siteTitle} />
-        <SEO postEdges={postEdges} />
-        <Grid tag="section">
-          <GridCell span="3" />
-          <GridCell span="6">
-            <PostListing postEdges={postEdges} />
-          </GridCell>
-          <GridCell span="3" />
-        </Grid>
-      </div>
-    );
-  }
+function Index(props) {
+  const postEdges = props.data.allMarkdownRemark.edges;
+  return (
+    <div className="index-container">
+      <Helmet title={config.siteTitle} />
+      <SEO postEdges={postEdges} />
+      <Grid tag="section">
+        <GridCell span="3" />
+        <GridCell span="6">
+          <PostListing postEdges={postEdges} />
+        </GridCell>
+        <GridCell span="3" />
+      </Grid>
+    </div>
+  );
 }
 
 export default Index;

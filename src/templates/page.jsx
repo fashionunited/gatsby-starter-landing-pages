@@ -28,43 +28,41 @@ const Meta = styled.div`
   justify-content: center;
 `;
 
-export default class PageTemplate extends React.Component {
-  render() {
-    const { slug } = this.props.pathContext;
-    const postNode = this.props.data.markdownRemark;
-    const post = postNode.frontmatter;
-    if (!post.id) {
-      post.id = slug;
-    }
-    if (!post.category_id) {
-      post.category_id = config.postDefaultCategoryID;
-    }
-    return (
-      <div>
-        <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
-        </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
-        <Grid tag="section">
-          <GridCell span="3" />
-          <GridCell span="6">
-            <div>
-              <h1>{post.title}</h1>
-              This is the page template
-              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-              <Meta>
-                <PostTags tags={post.tags} />
-                <SocialLinks postPath={slug} postNode={postNode} />
-              </Meta>
-              <UserInfo config={config} />
-              <Disqus postNode={postNode} />
-            </div>
-          </GridCell>
-          <GridCell span="3" />
-        </Grid>
-      </div>
-    );
+export default function PageTemplate(props) {
+  const { slug } = props.pathContext;
+  const postNode = props.data.markdownRemark;
+  const post = postNode.frontmatter;
+  if (!post.id) {
+    post.id = slug;
   }
+  if (!post.category_id) {
+    post.category_id = config.postDefaultCategoryID;
+  }
+  return (
+    <div>
+      <Helmet>
+        <title>{`${post.title} | ${config.siteTitle}`}</title>
+      </Helmet>
+      <SEO postPath={slug} postNode={postNode} postSEO />
+      <Grid tag="section">
+        <GridCell span="3" />
+        <GridCell span="6">
+          <div>
+            <h1>{post.title}</h1>
+            This is the page template
+            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            <Meta>
+              <PostTags tags={post.tags} />
+              <SocialLinks postPath={slug} postNode={postNode} />
+            </Meta>
+            <UserInfo config={config} />
+            <Disqus postNode={postNode} />
+          </div>
+        </GridCell>
+        <GridCell span="3" />
+      </Grid>
+    </div>
+  );
 }
 
 /* eslint no-undef: "off" */

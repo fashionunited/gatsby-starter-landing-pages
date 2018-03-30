@@ -79,78 +79,76 @@ export const StyledFigure = styled.figure`
   margin: 0;
 `;
 
-export default class PostTemplate extends React.Component {
-  render() {
-    const { slug } = this.props.pathContext;
-    const postNode = this.props.data.markdownRemark;
-    const post = postNode.frontmatter;
-    const plaatje = postNode.frontmatter.cover.childImageSharp.sizes;
-    if (!post.id) {
-      post.id = slug;
-    }
-    if (!post.category_id) {
-      post.category_id = config.postDefaultCategoryID;
-    }
-    return (
-      <div>
-        <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
-        </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
-        <StyledArticle>
-          <InsetColumn>
-            <CenteredTypography tag="h1" use="display1">
-              {post.title}
-            </CenteredTypography>
-          </InsetColumn>
-          <OutsetColumn>
-            <AspectRatioPlaceholder>
-              <StyledFigure>
-                <Img sizes={plaatje} />
-
-                {/* <ProgressiveImage
-                  src={`${post.cover}`}
-                  placeholder="data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABQBQCdASoqABwAP/3+/3+/urWyMBVYA/A/iWIAAR7p/Y3etgh4KD8QqXEZj6waibITSIAA/cndnUz4/z4LEgByYUql75Cq/12W33KFIKQpc8L0Dt19C7NFXin0tKlxd70dzSF978msbuqLjDgAAA=="
-                >
-                  {src => (
-                    <img
-                      alt={post.title}
-                      src={src}
-                      style={{
-                        maxWidth: "100%"
-                        // backgroundImage: `url(${src})`,
-                        // backgroundSize: 'cover',
-                        // height: '1186px',
-                        // height: '36rem', // so far it looks the placeholder needs height to load properly sized
-                        // height: '24.626rem',
-                      }}
-                    />
-                  )}
-                </ProgressiveImage> */}
-                <Typography use="caption">{post.caption}</Typography>
-              </StyledFigure>
-            </AspectRatioPlaceholder>
-          </OutsetColumn>
-          <InsetColumn>
-            <PostInner>
-              <Typography use="subheading1" tag="h5">
-                Written by {post.author.id}
-              </Typography>
-              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            </PostInner>
-          </InsetColumn>
-          <InsetColumn>
-            <Meta>
-              <PostTags tags={post.tags} />
-              <SocialLinks postPath={slug} postNode={postNode} />
-            </Meta>
-            <UserInfo config={config} />
-            <Disqus postNode={postNode} />
-          </InsetColumn>
-        </StyledArticle>
-      </div>
-    );
+export default function PostTemplate(props) {
+  const { slug } = props.pathContext;
+  const postNode = props.data.markdownRemark;
+  const post = postNode.frontmatter;
+  const plaatje = postNode.frontmatter.cover.childImageSharp.sizes;
+  if (!post.id) {
+    post.id = slug;
   }
+  if (!post.category_id) {
+    post.category_id = config.postDefaultCategoryID;
+  }
+  return (
+    <div>
+      <Helmet>
+        <title>{`${post.title} | ${config.siteTitle}`}</title>
+      </Helmet>
+      <SEO postPath={slug} postNode={postNode} postSEO />
+      <StyledArticle>
+        <InsetColumn>
+          <CenteredTypography tag="h1" use="display1">
+            {post.title}
+          </CenteredTypography>
+        </InsetColumn>
+        <OutsetColumn>
+          <AspectRatioPlaceholder>
+            <StyledFigure>
+              <Img sizes={plaatje} />
+
+              {/* <ProgressiveImage
+                src={`${post.cover}`}
+                placeholder="data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABQBQCdASoqABwAP/3+/3+/urWyMBVYA/A/iWIAAR7p/Y3etgh4KD8QqXEZj6waibITSIAA/cndnUz4/z4LEgByYUql75Cq/12W33KFIKQpc8L0Dt19C7NFXin0tKlxd70dzSF978msbuqLjDgAAA=="
+              >
+                {src => (
+                  <img
+                    alt={post.title}
+                    src={src}
+                    style={{
+                      maxWidth: "100%"
+                      // backgroundImage: `url(${src})`,
+                      // backgroundSize: 'cover',
+                      // height: '1186px',
+                      // height: '36rem', // so far it looks the placeholder needs height to load properly sized
+                      // height: '24.626rem',
+                    }}
+                  />
+                )}
+              </ProgressiveImage> */}
+              <Typography use="caption">{post.caption}</Typography>
+            </StyledFigure>
+          </AspectRatioPlaceholder>
+        </OutsetColumn>
+        <InsetColumn>
+          <PostInner>
+            <Typography use="subheading1" tag="h5">
+              Written by {post.author.id}
+            </Typography>
+            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+          </PostInner>
+        </InsetColumn>
+        <InsetColumn>
+          <Meta>
+            <PostTags tags={post.tags} />
+            <SocialLinks postPath={slug} postNode={postNode} />
+          </Meta>
+          <UserInfo config={config} />
+          <Disqus postNode={postNode} />
+        </InsetColumn>
+      </StyledArticle>
+    </div>
+  );
 }
 
 /* eslint no-undef: "off" */

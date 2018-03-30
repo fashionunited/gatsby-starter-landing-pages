@@ -8,21 +8,20 @@ import { Grid, GridCell } from 'rmwc/Grid';
 const imgStyle = css`
   border-radius: 5px;
 `;
-class AboutPage extends Component {
-  render() {
-    return (
-      <div className="about-container">
-        <Helmet title={`About | ${config.siteTitle}`} />
-        <Grid tag="section">
-          <GridCell span="3" />
-          <GridCell span="6">
-            <About />
-          </GridCell>
-          <GridCell span="3" />
-        </Grid>
-      </div>
-    );
-  }
+
+function AboutPage(props) {
+  return (
+    <div className="about-container">
+      <Helmet title={`About | ${config.siteTitle}`} />
+      <Grid tag="section">
+        <GridCell span="3" />
+        <GridCell span="6">
+          <About />
+        </GridCell>
+        <GridCell span="3" />
+      </Grid>
+    </div>
+  );
 }
 
 export default AboutPage;

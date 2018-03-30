@@ -9,16 +9,14 @@ const StyledDiv = styled.div`
   min-height: 300px;
 `;
 
-class About extends Component {
-  render() {
-    return (
-      <StyledDiv>
-        <h1>
-          Edit About component or pages/about.jsx to include your information.
-        </h1>
-      </StyledDiv>
-    );
-  }
+function About(props) {
+  return (
+    <StyledDiv>
+      <h1>
+        Edit About component or pages/about.jsx to include your information.
+      </h1>
+    </StyledDiv>
+  );
 }
 
 export default About;

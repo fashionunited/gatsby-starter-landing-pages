@@ -65,58 +65,57 @@ const ulStyle = css`
     margin: 0;
   }
 `;
-class Footer extends Component {
-  render() {
-    // const { config } = this.props;
-    const url = config.siteRss;
-    const copyright = config.copyright;
-    if (!copyright) {
-      return null;
-    }
-    return (
-      <StyledFooter>
-        <WrapperUserLinks>
-          <UserLinks config={config} labeled />
-        </WrapperUserLinks>
-        <Wrapper>
-          <ul className={ulStyle}>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/privacy-policy">Privacy Policy</Link>
-            </li>
-            <li>
-              <Link to="/terms-of-service">Terms of Service</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
 
-          <WrapperCenter>
-            <StyledTypograhy
-              tag="h4"
-              use="subheading1"
-              // theme="text-secondary-on-background" // As of now this only works with RMWC components directly, not when they are passed throug styled components / Emotion
-            >
-              {copyright}
-            </StyledTypograhy>
-            <StyledTypograhy tag="h4" use="subheading1">
-              Based on{' '}
-              <a href="https://github.com/Vagr9K/gatsby-advanced-starter">
-                Gatsby Advanced Starter
-              </a>{' '}
-              &{' '}
-              <a href="https://github.com/saschajullmann/gatsby-starter-gatsbythemes">
-                Gatsby Starter Gatsbythemes
-              </a>.
-            </StyledTypograhy>
-          </WrapperCenter>
-        </Wrapper>
-      </StyledFooter>
-    );
+function Footer(props) {
+  // const { config } = this.props;
+  const url = config.siteRss;
+  const copyright = config.copyright;
+  if (!copyright) {
+    return null;
   }
+  return (
+    <StyledFooter>
+      <WrapperUserLinks>
+        <UserLinks config={config} labeled />
+      </WrapperUserLinks>
+      <Wrapper>
+        <ul className={ulStyle}>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+          </li>
+          <li>
+            <Link to="/terms-of-service">Terms of Service</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+        </ul>
+
+        <WrapperCenter>
+          <StyledTypograhy
+            tag="h4"
+            use="subheading1"
+            // theme="text-secondary-on-background" // As of now this only works with RMWC components directly, not when they are passed throug styled components / Emotion
+          >
+            {copyright}
+          </StyledTypograhy>
+          <StyledTypograhy tag="h4" use="subheading1">
+            Based on{' '}
+            <a href="https://github.com/Vagr9K/gatsby-advanced-starter">
+              Gatsby Advanced Starter
+            </a>{' '}
+            &{' '}
+            <a href="https://github.com/saschajullmann/gatsby-starter-gatsbythemes">
+              Gatsby Starter Gatsbythemes
+            </a>.
+          </StyledTypograhy>
+        </WrapperCenter>
+      </Wrapper>
+    </StyledFooter>
+  );
 }
 
 export default Footer;
